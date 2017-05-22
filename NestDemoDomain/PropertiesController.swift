@@ -8,18 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PropertiesController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        navigationItem.title = "Properties"
+        collectionView?.backgroundColor = UIColor(white: 0.95, alpha: 1)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
