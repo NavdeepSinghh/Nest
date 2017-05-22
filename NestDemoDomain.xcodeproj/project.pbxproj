@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		F17180DA1ED25A1600C76C57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17180D91ED25A1600C76C57 /* AppDelegate.swift */; };
 		F17180DC1ED25A1600C76C57 /* PropertiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17180DB1ED25A1600C76C57 /* PropertiesController.swift */; };
-		F17180DF1ED25A1600C76C57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17180DD1ED25A1600C76C57 /* Main.storyboard */; };
 		F17180E11ED25A1600C76C57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F17180E01ED25A1600C76C57 /* Assets.xcassets */; };
 		F17180E41ED25A1600C76C57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17180E21ED25A1600C76C57 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,7 +17,6 @@
 		F17180D61ED25A1600C76C57 /* NestDemoDomain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NestDemoDomain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F17180D91ED25A1600C76C57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F17180DB1ED25A1600C76C57 /* PropertiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesController.swift; sourceTree = "<group>"; };
-		F17180DE1ED25A1600C76C57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F17180E01ED25A1600C76C57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F17180E31ED25A1600C76C57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F17180E51ED25A1600C76C57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,13 +53,20 @@
 			isa = PBXGroup;
 			children = (
 				F17180D91ED25A1600C76C57 /* AppDelegate.swift */,
-				F17180DB1ED25A1600C76C57 /* PropertiesController.swift */,
-				F17180DD1ED25A1600C76C57 /* Main.storyboard */,
+				F171810E1ED2A4A000C76C57 /* Controllers */,
 				F17180E01ED25A1600C76C57 /* Assets.xcassets */,
 				F17180E21ED25A1600C76C57 /* LaunchScreen.storyboard */,
 				F17180E51ED25A1600C76C57 /* Info.plist */,
 			);
 			path = NestDemoDomain;
+			sourceTree = "<group>";
+		};
+		F171810E1ED2A4A000C76C57 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F17180DB1ED25A1600C76C57 /* PropertiesController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +130,6 @@
 			files = (
 				F17180E41ED25A1600C76C57 /* LaunchScreen.storyboard in Resources */,
 				F17180E11ED25A1600C76C57 /* Assets.xcassets in Resources */,
-				F17180DF1ED25A1600C76C57 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,14 +148,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F17180DD1ED25A1600C76C57 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F17180DE1ED25A1600C76C57 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F17180E21ED25A1600C76C57 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
