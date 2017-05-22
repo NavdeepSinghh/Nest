@@ -15,11 +15,27 @@ class PropertiesController: UICollectionViewController, UICollectionViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Properties"
+        navigationController?.navigationBar.isTranslucent = false
         collectionView?.backgroundColor = UIColor(white: 0.95, alpha: 1)
         collectionView?.alwaysBounceVertical = true
         collectionView?.register(PropertyCell.self, forCellWithReuseIdentifier: cellId)
+        
+        // To Re-adjust collectionView under the menubar
+        collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 0, 0)
+        collectionView?.scrollIndicatorInsets = UIEdgeInsetsMake(50, 0, 0, 0)
+        setupMenuBar()
     }
     
+    let menuBar : MenuBar = {
+        let menu = MenuBar()
+        return menu
+    }()
+    
+    private func setupMenuBar(){
+        view.addSubview(menuBar)
+        view.addConstraintWithFormat(format: "H:|[v0]|", views: menuBar)
+        view.addConstraintWithFormat(format: "V:|[v0(50)]", views: menuBar)
+    }
     
     // Configuring collectionView
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

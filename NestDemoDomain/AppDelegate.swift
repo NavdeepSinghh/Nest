@@ -23,6 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = UINavigationController(rootViewController: propertiesController)
         window?.rootViewController = navigationController
         
+        // Remove the NavBar line
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        
         UINavigationBar.appearance().barTintColor = UIColor.getColor(red: 0, green: 200, blue: 0)
         // Making the status bar colour white
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]

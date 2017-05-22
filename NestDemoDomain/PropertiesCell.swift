@@ -23,8 +23,7 @@ class PropertyCell : UICollectionViewCell {
         imageView.image = #imageLiteral(resourceName: "Test")
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        //imageView.backgroundColor = UIColor.green
-        imageView.translatesAutoresizingMaskIntoConstraints = false
+        
         return imageView
     }()
     
@@ -35,16 +34,15 @@ class PropertyCell : UICollectionViewCell {
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 22
         imageView.layer.masksToBounds = true
-        imageView.translatesAutoresizingMaskIntoConstraints = false
+        
         return imageView
     }()
     
     var descriptionLabel : UILabel = {
         let label = UILabel()
-        label.text = "Dummy Text"
-        label.backgroundColor = UIColor.blue
-        label.numberOfLines = 2
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Chic Alfresco Outdoor Living Adding more text to check the height dbdpojnn"
+        label.numberOfLines = 2
         label.textColor = UIColor.darkGray
         return label
     }()
