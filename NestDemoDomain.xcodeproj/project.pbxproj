@@ -14,6 +14,7 @@
 		F17181101ED2A8DB00C76C57 /* PropertiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F171810F1ED2A8DB00C76C57 /* PropertiesCell.swift */; };
 		F17181141ED2D76C00C76C57 /* ViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17181131ED2D76C00C76C57 /* ViewHelper.swift */; };
 		F1934F181ED2FB0F00C2B9EE /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1934F171ED2FB0F00C2B9EE /* MenuBar.swift */; };
+		F1934F1A1ED3AD8100C2B9EE /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1934F191ED3AD8100C2B9EE /* MenuCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F171810F1ED2A8DB00C76C57 /* PropertiesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertiesCell.swift; sourceTree = "<group>"; };
 		F17181131ED2D76C00C76C57 /* ViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHelper.swift; sourceTree = "<group>"; };
 		F1934F171ED2FB0F00C2B9EE /* MenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
+		F1934F191ED3AD8100C2B9EE /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				F171810F1ED2A8DB00C76C57 /* PropertiesCell.swift */,
+				F1934F191ED3AD8100C2B9EE /* MenuCell.swift */,
 			);
 			name = CollectionViewCells;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			files = (
 				F17180DC1ED25A1600C76C57 /* PropertiesController.swift in Sources */,
 				F17181101ED2A8DB00C76C57 /* PropertiesCell.swift in Sources */,
+				F1934F1A1ED3AD8100C2B9EE /* MenuCell.swift in Sources */,
 				F17181141ED2D76C00C76C57 /* ViewHelper.swift in Sources */,
 				F17180DA1ED25A1600C76C57 /* AppDelegate.swift in Sources */,
 				F1934F181ED2FB0F00C2B9EE /* MenuBar.swift in Sources */,
