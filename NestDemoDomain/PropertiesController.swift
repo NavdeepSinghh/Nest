@@ -17,7 +17,7 @@ class PropertiesController: UICollectionViewController, UICollectionViewDelegate
         navigationItem.title = "Properties"
         collectionView?.backgroundColor = UIColor(white: 0.95, alpha: 1)
         collectionView?.alwaysBounceVertical = true
-        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView?.register(PropertyCell.self, forCellWithReuseIdentifier: cellId)
     }
     
     
@@ -27,10 +27,16 @@ class PropertiesController: UICollectionViewController, UICollectionViewDelegate
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-        cell.backgroundColor = UIColor.red
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! PropertyCell
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width, height: 200)
+    }
 
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
 }
 

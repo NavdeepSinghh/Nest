@@ -11,6 +11,7 @@
 		F17180DC1ED25A1600C76C57 /* PropertiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17180DB1ED25A1600C76C57 /* PropertiesController.swift */; };
 		F17180E11ED25A1600C76C57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F17180E01ED25A1600C76C57 /* Assets.xcassets */; };
 		F17180E41ED25A1600C76C57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17180E21ED25A1600C76C57 /* LaunchScreen.storyboard */; };
+		F17181101ED2A8DB00C76C57 /* PropertiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F171810F1ED2A8DB00C76C57 /* PropertiesCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		F17180E01ED25A1600C76C57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F17180E31ED25A1600C76C57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F17180E51ED25A1600C76C57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F171810F1ED2A8DB00C76C57 /* PropertiesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertiesCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				F17180D91ED25A1600C76C57 /* AppDelegate.swift */,
+				F17181121ED2D35700C76C57 /* Views */,
 				F171810E1ED2A4A000C76C57 /* Controllers */,
 				F17180E01ED25A1600C76C57 /* Assets.xcassets */,
 				F17180E21ED25A1600C76C57 /* LaunchScreen.storyboard */,
@@ -67,6 +70,22 @@
 				F17180DB1ED25A1600C76C57 /* PropertiesController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F17181111ED2D33C00C76C57 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				F171810F1ED2A8DB00C76C57 /* PropertiesCell.swift */,
+			);
+			name = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		F17181121ED2D35700C76C57 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F17181111ED2D33C00C76C57 /* CollectionViewCells */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F17180DC1ED25A1600C76C57 /* PropertiesController.swift in Sources */,
+				F17181101ED2A8DB00C76C57 /* PropertiesCell.swift in Sources */,
 				F17180DA1ED25A1600C76C57 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +317,7 @@
 				F17180EA1ED25A1600C76C57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
