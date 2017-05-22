@@ -24,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = navigationController
         
         UINavigationBar.appearance().barTintColor = UIColor(red: 0/255, green: 200/255, blue: 0/255, alpha: 1)
+        //Making the status bar colour white
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
+        application.statusBarStyle = .lightContent
 
         return true
     }
