@@ -23,18 +23,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = UINavigationController(rootViewController: propertiesController)
         window?.rootViewController = navigationController
         
-        UINavigationBar.appearance().barTintColor = UIColor(red: 0/255, green: 200/255, blue: 0/255, alpha: 1)
-        //Making the status bar colour white
+        UINavigationBar.appearance().barTintColor = UIColor.getColor(red: 0, green: 200, blue: 0)
+        // Making the status bar colour white
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
         application.statusBarStyle = .lightContent
         
+        // Adding status bar background
         let statusBarBackgroundView = UIView()
-        statusBarBackgroundView.backgroundColor = UIColor(red: 0/255, green: 170/255, blue: 0/255, alpha: 1)
+        statusBarBackgroundView.backgroundColor = UIColor.getColor(red: 0, green: 200, blue: 0)
         statusBarBackgroundView.translatesAutoresizingMaskIntoConstraints = false
         window?.addSubview(statusBarBackgroundView)
-        window?.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0":statusBarBackgroundView]))
-        window?.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0(20)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0":statusBarBackgroundView]))
-
+        window?.addConstraintWithFormat(format: "H:|[v0]|", views: statusBarBackgroundView)
+        window?.addConstraintWithFormat(format: "V:|[v0(20)]", views: statusBarBackgroundView)
         return true
     }
 }

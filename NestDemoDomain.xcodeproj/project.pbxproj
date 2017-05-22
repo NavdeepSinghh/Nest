@@ -12,6 +12,7 @@
 		F17180E11ED25A1600C76C57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F17180E01ED25A1600C76C57 /* Assets.xcassets */; };
 		F17180E41ED25A1600C76C57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17180E21ED25A1600C76C57 /* LaunchScreen.storyboard */; };
 		F17181101ED2A8DB00C76C57 /* PropertiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F171810F1ED2A8DB00C76C57 /* PropertiesCell.swift */; };
+		F17181141ED2D76C00C76C57 /* ViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17181131ED2D76C00C76C57 /* ViewHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		F17180E31ED25A1600C76C57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F17180E51ED25A1600C76C57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F171810F1ED2A8DB00C76C57 /* PropertiesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertiesCell.swift; sourceTree = "<group>"; };
+		F17181131ED2D76C00C76C57 /* ViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 		F17180CD1ED25A1600C76C57 = {
 			isa = PBXGroup;
 			children = (
+				F17181131ED2D76C00C76C57 /* ViewHelper.swift */,
 				F17180D81ED25A1600C76C57 /* NestDemoDomain */,
 				F17180D71ED25A1600C76C57 /* Products */,
 			);
@@ -161,6 +164,7 @@
 			files = (
 				F17180DC1ED25A1600C76C57 /* PropertiesController.swift in Sources */,
 				F17181101ED2A8DB00C76C57 /* PropertiesCell.swift in Sources */,
+				F17181141ED2D76C00C76C57 /* ViewHelper.swift in Sources */,
 				F17180DA1ED25A1600C76C57 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

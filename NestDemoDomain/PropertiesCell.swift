@@ -20,14 +20,21 @@ class PropertyCell : UICollectionViewCell {
     
     var propertyImageView : UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = UIColor.green
+        imageView.image = #imageLiteral(resourceName: "Test")
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        //imageView.backgroundColor = UIColor.green
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
     var likedImageView : UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = UIColor.brown
+        imageView.image = #imageLiteral(resourceName: "star")
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 22
+        imageView.layer.masksToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -45,7 +52,7 @@ class PropertyCell : UICollectionViewCell {
     let separatorView : UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1)
+        view.backgroundColor = UIColor.getColor(red: 230, green: 230, blue: 230)
         return view
     }()
     
@@ -60,13 +67,14 @@ class PropertyCell : UICollectionViewCell {
     
         // Horizontal Constraints
         
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-16-[v0]-16-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": propertyImageView]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-16-[v0]-8-[v1(44)]-16-[v2(1)]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": propertyImageView, "v1":likedImageView,"v2":separatorView]))
+        //Horizontal Constraints
+        addConstraintWithFormat(format: "H:|-16-[v0]-16-|", views: propertyImageView)
+        addConstraintWithFormat(format: "H:|-16-[v0(44)]", views: likedImageView)
+        //Vertical Constraints
+        addConstraintWithFormat(format: "V:|-16-[v0]-8-[v1(44)]-16-[v2(1)]|", views: propertyImageView, likedImageView, separatorView)
         
-        
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": separatorView]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-16-[v0(44)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": likedImageView]))
-        //addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[v0(1)]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": separatorView]))
+        addConstraintWithFormat(format: "H:|[v0]|", views: separatorView)
+
         
         //top constraint
         addConstraint(NSLayoutConstraint(item: descriptionLabel, attribute: .top, relatedBy: .equal, toItem: propertyImageView, attribute: .bottom, multiplier: 1, constant: 8))
