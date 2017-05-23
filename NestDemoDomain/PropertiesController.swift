@@ -11,6 +11,12 @@ import UIKit
 let cellId = "propertyCell"
 
 class PropertiesController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    
+    var properties : [Property] = {
+        let property1 = Property(propertyId: 1, propertyImage: "Test.jpeg", descriptionText: "Dummy Text", isLiked: true)
+        let property2 = Property(propertyId: 2, propertyImage: "Test.jpeg", descriptionText: "Dummy text for item at index 2 and thi text is long becaue I want to test the height of the label holding this text", isLiked : true)
+        return [property1, property2]
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,11 +45,12 @@ class PropertiesController: UICollectionViewController, UICollectionViewDelegate
     
     // Configuring collectionView
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return properties.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! PropertyCell
+        cell.property = properties[indexPath.row]
         return cell
     }
     

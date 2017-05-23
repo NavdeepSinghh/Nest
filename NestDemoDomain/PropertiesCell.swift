@@ -9,6 +9,20 @@
 import UIKit
 
 class PropertyCell : BaseCell {
+    
+    var property : Property? {
+        didSet {
+            self.descriptionLabel.text = property?.descriptionText
+            if let image = property?.propertyImage {
+                self.propertyImageView.image = UIImage(named: image)
+            }
+            if (property?.isLiked) != nil {
+                 // setup likedImageView Accordingly
+            }else {
+                
+            }
+        }
+    }
         
     var propertyImageView : UIImageView = {
         let imageView = UIImageView()
@@ -33,9 +47,10 @@ class PropertyCell : BaseCell {
     var descriptionLabel : UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Chic Alfresco Outdoor Living Adding more text to check the height dbdpojnn"
         label.numberOfLines = 2
         label.textColor = UIColor.darkGray
+        label.allowsDefaultTighteningForTruncation = true
+        label.lineBreakMode = NSLineBreakMode.byTruncatingTail
         return label
     }()
     
