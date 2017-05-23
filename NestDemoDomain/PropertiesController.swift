@@ -10,7 +10,7 @@ import UIKit
 
 let cellId = "propertyCell"
 
-class PropertiesController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class PropertiesController: UICollectionViewController{
     
     var properties : [Property] = {
         let property1 = Property(propertyId: 1, propertyImage: "Test.jpeg", descriptionText: "Dummy Text", isLiked: true)
@@ -42,27 +42,4 @@ class PropertiesController: UICollectionViewController, UICollectionViewDelegate
         view.addConstraintWithFormat(format: "H:|[v0]|", views: menuBar)
         view.addConstraintWithFormat(format: "V:|[v0(50)]", views: menuBar)
     }
-    
-    // Configuring collectionView
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return properties.count
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! PropertyCell
-        cell.property = properties[indexPath.row]
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        // Adjusting accroding to the screen ratios available
-        let height = (view.frame.width - 32) * 9 / 16
-        return CGSize(width: view.frame.width, height: height + 16 + 68)
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
 }
-
