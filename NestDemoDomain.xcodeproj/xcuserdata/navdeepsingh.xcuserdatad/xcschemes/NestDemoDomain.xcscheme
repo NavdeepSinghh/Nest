@@ -28,6 +28,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F1934F291ED3E66E00C2B9EE"
+               BuildableName = "NestDemoDomainAsyncTests.xctest"
+               BlueprintName = "NestDemoDomainAsyncTests"
+               ReferencedContainer = "container:NestDemoDomain.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

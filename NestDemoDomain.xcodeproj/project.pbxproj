@@ -19,7 +19,18 @@
 		F1934F211ED3BBA000C2B9EE /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1934F201ED3BBA000C2B9EE /* Property.swift */; };
 		F1934F231ED3C58900C2B9EE /* MenuBar+DelegateMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1934F221ED3C58900C2B9EE /* MenuBar+DelegateMethods.swift */; };
 		F1934F251ED3C5E100C2B9EE /* PropertiesController+CollectionViewDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1934F241ED3C5E100C2B9EE /* PropertiesController+CollectionViewDelegates.swift */; };
+		F1934F2D1ED3E66E00C2B9EE /* NestDemoDomainAsyncTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1934F2C1ED3E66E00C2B9EE /* NestDemoDomainAsyncTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F1934F2F1ED3E66E00C2B9EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F17180CE1ED25A1600C76C57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F17180D51ED25A1600C76C57;
+			remoteInfo = NestDemoDomain;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		F17180D61ED25A1600C76C57 /* NestDemoDomain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NestDemoDomain.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,10 +47,20 @@
 		F1934F201ED3BBA000C2B9EE /* Property.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		F1934F221ED3C58900C2B9EE /* MenuBar+DelegateMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MenuBar+DelegateMethods.swift"; sourceTree = "<group>"; };
 		F1934F241ED3C5E100C2B9EE /* PropertiesController+CollectionViewDelegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PropertiesController+CollectionViewDelegates.swift"; sourceTree = "<group>"; };
+		F1934F2A1ED3E66E00C2B9EE /* NestDemoDomainAsyncTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NestDemoDomainAsyncTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1934F2C1ED3E66E00C2B9EE /* NestDemoDomainAsyncTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestDemoDomainAsyncTests.swift; sourceTree = "<group>"; };
+		F1934F2E1ED3E66E00C2B9EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F17180D31ED25A1600C76C57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1934F271ED3E66E00C2B9EE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -54,6 +75,7 @@
 			children = (
 				F17180D81ED25A1600C76C57 /* NestDemoDomain */,
 				F1934F1D1ED3BB3500C2B9EE /* SupportingFiles */,
+				F1934F2B1ED3E66E00C2B9EE /* NestDemoDomainAsyncTests */,
 				F17180D71ED25A1600C76C57 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				F17180D61ED25A1600C76C57 /* NestDemoDomain.app */,
+				F1934F2A1ED3E66E00C2B9EE /* NestDemoDomainAsyncTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,6 +156,15 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		F1934F2B1ED3E66E00C2B9EE /* NestDemoDomainAsyncTests */ = {
+			isa = PBXGroup;
+			children = (
+				F1934F2C1ED3E66E00C2B9EE /* NestDemoDomainAsyncTests.swift */,
+				F1934F2E1ED3E66E00C2B9EE /* Info.plist */,
+			);
+			path = NestDemoDomainAsyncTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,6 +185,24 @@
 			productReference = F17180D61ED25A1600C76C57 /* NestDemoDomain.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F1934F291ED3E66E00C2B9EE /* NestDemoDomainAsyncTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1934F311ED3E66E00C2B9EE /* Build configuration list for PBXNativeTarget "NestDemoDomainAsyncTests" */;
+			buildPhases = (
+				F1934F261ED3E66E00C2B9EE /* Sources */,
+				F1934F271ED3E66E00C2B9EE /* Frameworks */,
+				F1934F281ED3E66E00C2B9EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F1934F301ED3E66E00C2B9EE /* PBXTargetDependency */,
+			);
+			name = NestDemoDomainAsyncTests;
+			productName = NestDemoDomainAsyncTests;
+			productReference = F1934F2A1ED3E66E00C2B9EE /* NestDemoDomainAsyncTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -166,6 +216,11 @@
 					F17180D51ED25A1600C76C57 = {
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
+					};
+					F1934F291ED3E66E00C2B9EE = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F17180D51ED25A1600C76C57;
 					};
 				};
 			};
@@ -183,6 +238,7 @@
 			projectRoot = "";
 			targets = (
 				F17180D51ED25A1600C76C57 /* NestDemoDomain */,
+				F1934F291ED3E66E00C2B9EE /* NestDemoDomainAsyncTests */,
 			);
 		};
 /* End PBXProject section */
@@ -194,6 +250,13 @@
 			files = (
 				F17180E41ED25A1600C76C57 /* LaunchScreen.storyboard in Resources */,
 				F17180E11ED25A1600C76C57 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1934F281ED3E66E00C2B9EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +280,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F1934F261ED3E66E00C2B9EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1934F2D1ED3E66E00C2B9EE /* NestDemoDomainAsyncTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F1934F301ED3E66E00C2B9EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F17180D51ED25A1600C76C57 /* NestDemoDomain */;
+			targetProxy = F1934F2F1ED3E66E00C2B9EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F17180E21ED25A1600C76C57 /* LaunchScreen.storyboard */ = {
@@ -351,6 +430,32 @@
 			};
 			name = Release;
 		};
+		F1934F321ED3E66E00C2B9EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = NestDemoDomainAsyncTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Navdeep.NestDemoDomainAsyncTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NestDemoDomain.app/NestDemoDomain";
+			};
+			name = Debug;
+		};
+		F1934F331ED3E66E00C2B9EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = NestDemoDomainAsyncTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Navdeep.NestDemoDomainAsyncTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NestDemoDomain.app/NestDemoDomain";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -371,6 +476,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F1934F311ED3E66E00C2B9EE /* Build configuration list for PBXNativeTarget "NestDemoDomainAsyncTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1934F321ED3E66E00C2B9EE /* Debug */,
+				F1934F331ED3E66E00C2B9EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
