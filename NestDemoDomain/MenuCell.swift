@@ -12,10 +12,24 @@ class MenuCell: BaseCell {
    
     let menuBarItemLabel : UILabel = {
         let label = UILabel()
-        label.text = "Rent"
+        label.textAlignment = .center
+        label.font = .boldSystemFont(ofSize: 20)
+        label.textColor = UIColor.darkGray
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    
+    override var isHighlighted: Bool {
+        didSet {
+            menuBarItemLabel.textColor = isHighlighted ? UIColor.white : UIColor.darkGray
+        }
+    }
+    
+    override var isSelected: Bool {
+        didSet {
+            menuBarItemLabel.textColor = isSelected ? UIColor.white : UIColor.darkGray
+        }
+    }
    
     override func setupViews(){
     addSubview(menuBarItemLabel)

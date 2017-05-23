@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NestDemoDomain/MenuCell.swift"
-            timestampString = "517190095.046479"
+            timestampString = "517192120.068225"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36">
+            startingLineNumber = "46"
+            endingLineNumber = "46">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

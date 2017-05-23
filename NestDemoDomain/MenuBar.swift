@@ -9,6 +9,7 @@
 import UIKit
 
 let menuCellId = "menuBarCell"
+let menuBarNames = ["Rent", "Buy"]
 
 class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
@@ -36,7 +37,8 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: menuCellId, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: menuCellId, for: indexPath) as! MenuCell
+        cell.menuBarItemLabel.text = menuBarNames[indexPath.row]
         return cell
     }
     
