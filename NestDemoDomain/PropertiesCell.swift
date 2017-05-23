@@ -8,16 +8,8 @@
 
 import UIKit
 
-class PropertyCell : UICollectionViewCell {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupViews()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+class PropertyCell : BaseCell {
+        
     var propertyImageView : UIImageView = {
         let imageView = UIImageView()
         imageView.image = #imageLiteral(resourceName: "Test")
@@ -54,7 +46,7 @@ class PropertyCell : UICollectionViewCell {
         return view
     }()
     
-    func setupViews(){
+    override func setupViews(){
         backgroundColor = UIColor.white
         
         // Add subviews 
