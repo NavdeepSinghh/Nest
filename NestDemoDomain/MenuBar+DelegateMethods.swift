@@ -17,7 +17,7 @@ extension MenuBar : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: menuCellId, for: indexPath) as! MenuCell
-        cell.menuBarItemLabel.text = menuBarNames[indexPath.row]
+        cell.menuItemText = menuBarNames[indexPath.row]
         return cell
     }
 }

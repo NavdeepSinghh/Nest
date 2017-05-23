@@ -39,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.addSubview(statusBarBackgroundView)
         window?.addConstraintWithFormat(format: "H:|[v0]|", views: statusBarBackgroundView)
         window?.addConstraintWithFormat(format: "V:|[v0(20)]", views: statusBarBackgroundView)
+        
         return true
     }
 }

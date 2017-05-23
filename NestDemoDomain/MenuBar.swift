@@ -12,7 +12,7 @@ let menuCellId = "menuBarCell"
 let menuBarNames = ["Rent", "Buy"]
 
 class MenuBar: UIView, UICollectionViewDelegate {
-    
+        
     lazy var collectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
