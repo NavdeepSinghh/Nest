@@ -10,9 +10,6 @@ import UIKit
 
 class PropertyCell : BaseCell {
     
-    // Concurrent queue required for smooth loading of images in the cells
-    let concurrrentQueue = DispatchQueue.global()
-    
     var property : Property? {
         didSet {
             self.descriptionLabel.text = property?.descriptionText
@@ -27,21 +24,8 @@ class PropertyCell : BaseCell {
     
     func setupPropertyImage(){
         if let propertyImageUrl = property?.propertyImageURLString{
-            // Call the method to load images asynchronously 
-        
-            guard let url = URL(string: propertyImageUrl) else {return}
-            URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
-                if let error = error {
-                    print(error.localizedDescription)
-                    return
-                } else if let data = data,
-                    let response = response as? HTTPURLResponse,
-                    response.statusCode == 200 {
-                    DispatchQueue.main.async {
-                        self.propertyImageView.image = UIImage(data: data)
-                    }
-                }
-            }).resume()            
+            // Call the method to load images asynchronously using extension method
+            propertyImageView.loadImageUsingURLString(urlString: propertyImageUrl)
         }
     }
         
