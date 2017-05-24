@@ -10,16 +10,13 @@ import UIKit
 
 class PropertyCell : BaseCell {
     
-    
     // Concurrent queue required for smooth loading of images in the cells
     let concurrrentQueue = DispatchQueue.global()
     
     var property : Property? {
         didSet {
             self.descriptionLabel.text = property?.descriptionText
-            if let url = URL(string: (property?.propertyImage)!) {
-                asyncLoadImages(url, runQueue: concurrrentQueue)
-            }
+            setupPropertyImage()
             if (property?.isLiked) != nil {
                  // setup likedImageView Accordingly
             }else {
@@ -28,15 +25,23 @@ class PropertyCell : BaseCell {
         }
     }
     
-    // Load images withing the cells asynchronously
-    // TODO : convert this to an async dataTask
-    func asyncLoadImages(_ url : URL, runQueue : DispatchQueue){
-        runQueue.async {
-            if let data = NSData (contentsOf: url as URL){
-                DispatchQueue.main.async {
-                    self.propertyImageView.image = UIImage(data: data as Data)
+    func setupPropertyImage(){
+        if let propertyImageUrl = property?.propertyImageURLString{
+            // Call the method to load images asynchronously 
+        
+            guard let url = URL(string: propertyImageUrl) else {return}
+            URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+                if let error = error {
+                    print(error.localizedDescription)
+                    return
+                } else if let data = data,
+                    let response = response as? HTTPURLResponse,
+                    response.statusCode == 200 {
+                    DispatchQueue.main.async {
+                        self.propertyImageView.image = UIImage(data: data)
+                    }
                 }
-            }
+            }).resume()            
         }
     }
         

@@ -168,8 +168,8 @@
 		F17181111ED2D33C00C76C57 /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				F171810F1ED2A8DB00C76C57 /* PropertiesCell.swift */,
 				F1934F1B1ED3B29F00C2B9EE /* BaseCell.swift */,
+				F171810F1ED2A8DB00C76C57 /* PropertiesCell.swift */,
 				F1934F191ED3AD8100C2B9EE /* MenuCell.swift */,
 			);
 			name = CollectionViewCells;

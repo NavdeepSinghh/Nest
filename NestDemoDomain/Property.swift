@@ -10,14 +10,14 @@ import UIKit
 
 class Property: NSObject {
     var propertyID : Int?
-    var propertyImage : String?
+    var propertyImageURLString : String?
     var descriptionText : String?
     var isLiked : Bool?
     
     // initializer
-    init(propertyId: Int, propertyImage : String, descriptionText : String, isLiked : Bool) {
+    init(propertyId: Int, propertyImageURLString : String, descriptionText : String, isLiked : Bool) {
         self.propertyID = propertyId
-        self.propertyImage = propertyImage
+        self.propertyImageURLString = propertyImageURLString
         self.descriptionText = descriptionText
         self.isLiked = isLiked
     }

@@ -30,6 +30,11 @@ class NestDemoDomainMockTests: XCTestCase {
 
     }
     
+    override func tearDown() {
+        apiManagerUnderTest = nil
+        super.tearDown()
+    }
+    
     func testGetPropertiesResults() {
         // Given 
         let promise = expectation(description: "Status code : 200")

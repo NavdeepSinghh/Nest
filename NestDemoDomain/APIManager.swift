@@ -95,7 +95,7 @@ class APIManager{
                         }
                     }
                     // TODO: change the property on isLiked here it self by comparing it with store array of Userdefaults
-                    propertiesArray.append(Property(propertyId: id, propertyImage: imageURL, descriptionText: description, isLiked: false))
+                    propertiesArray.append(Property(propertyId: id, propertyImageURLString: imageURL, descriptionText: description, isLiked: false))
                 }else{
                     errorMessage += "Error parsing the media dcitionary \n"
                 }
