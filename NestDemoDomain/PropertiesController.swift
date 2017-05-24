@@ -25,6 +25,15 @@ class PropertiesController: UICollectionViewController{
         
         // Accessing Api to get Property results for default choice
         // TODO: Load choices depending on the UserDefaults values 
+        fetchProperties(for : "")
+        
+        // To Re-adjust collectionView under the menubar
+        collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 0, 0)
+        collectionView?.scrollIndicatorInsets = UIEdgeInsetsMake(50, 0, 0, 0)
+        setupMenuBar()
+    }
+    
+    func fetchProperties(for : String) {
         apiManager.getPropertyResults(for: "") { (properties, errorMessage) in
             if let properties = properties {
                 self.properties = properties
@@ -32,11 +41,6 @@ class PropertiesController: UICollectionViewController{
             }
             if errorMessage.isEmpty {print("Search Error :" + errorMessage)}
         }
-        
-        // To Re-adjust collectionView under the menubar
-        collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 0, 0)
-        collectionView?.scrollIndicatorInsets = UIEdgeInsetsMake(50, 0, 0, 0)
-        setupMenuBar()
     }
     
     let menuBar : MenuBar = {

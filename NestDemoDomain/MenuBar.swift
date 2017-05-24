@@ -11,7 +11,7 @@ import UIKit
 let menuCellId = "menuBarCell"
 let menuBarNames = ["Rent", "Buy"]
 
-class MenuBar: UIView, UICollectionViewDelegate {
+class MenuBar: UIView{
         
     lazy var collectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -30,6 +30,23 @@ class MenuBar: UIView, UICollectionViewDelegate {
         addConstraintWithFormat(format: "H:|[v0]|", views: collectionView)
         addConstraintWithFormat(format: "V:|[v0]|", views: collectionView)
     
+        // Adding highlighter bar below the selected menu item
+        setupHorizontalBar()
+    }
+    
+    var horizontalBarLeftConstraint : NSLayoutConstraint?
+    
+    func setupHorizontalBar(){
+        let horizontalBarView = UIView()
+        horizontalBarView.backgroundColor = UIColor(white: 1, alpha: 1)
+        horizontalBarView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(horizontalBarView)
+        
+        horizontalBarLeftConstraint = horizontalBarView.leftAnchor.constraint(equalTo: self.leftAnchor)
+        horizontalBarLeftConstraint?.isActive = true
+        horizontalBarView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        horizontalBarView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier : 1/2).isActive = true
+        horizontalBarView.heightAnchor.constraint(equalToConstant: 4).isActive = true
     }
     
    required init?(coder aDecoder: NSCoder) {
