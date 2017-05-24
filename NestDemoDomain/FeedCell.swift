@@ -10,10 +10,19 @@ import UIKit
 
 class FeedCell: BaseCell {
 
+    let collectionView : UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = .white
+        return collectionView
+    }()
+    
     override func setupViews() {
         super.setupViews()
         
-        backgroundColor = UIColor.brown
+        addSubview(collectionView)
+        addConstraintWithFormat(format: "H:|[v0]|", views: collectionView)
+        addConstraintWithFormat(format: "V:|[v0]|", views: collectionView)
     }
 
 }
