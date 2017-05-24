@@ -12,6 +12,8 @@ let menuCellId = "menuBarCell"
 let menuBarNames = ["Rent", "Buy"]
 
 class MenuBar: UIView{
+    
+    var propertiesController : PropertiesController?
         
     lazy var collectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout()

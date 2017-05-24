@@ -19,6 +19,7 @@
 		F17180E41ED25A1600C76C57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17180E21ED25A1600C76C57 /* LaunchScreen.storyboard */; };
 		F17181101ED2A8DB00C76C57 /* PropertiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F171810F1ED2A8DB00C76C57 /* PropertiesCell.swift */; };
 		F17181141ED2D76C00C76C57 /* ViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17181131ED2D76C00C76C57 /* ViewHelper.swift */; };
+		F1911DE71ED647F600E9A5CE /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1911DE61ED647F600E9A5CE /* FeedCell.swift */; };
 		F1934F181ED2FB0F00C2B9EE /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1934F171ED2FB0F00C2B9EE /* MenuBar.swift */; };
 		F1934F1A1ED3AD8100C2B9EE /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1934F191ED3AD8100C2B9EE /* MenuCell.swift */; };
 		F1934F1C1ED3B29F00C2B9EE /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1934F1B1ED3B29F00C2B9EE /* BaseCell.swift */; };
@@ -60,6 +61,7 @@
 		F17180E51ED25A1600C76C57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = NestDemoDomain/Info.plist; sourceTree = "<group>"; };
 		F171810F1ED2A8DB00C76C57 /* PropertiesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertiesCell.swift; sourceTree = "<group>"; };
 		F17181131ED2D76C00C76C57 /* ViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHelper.swift; sourceTree = "<group>"; };
+		F1911DE61ED647F600E9A5CE /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		F1934F171ED2FB0F00C2B9EE /* MenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 		F1934F191ED3AD8100C2B9EE /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		F1934F1B1ED3B29F00C2B9EE /* BaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				F1934F1B1ED3B29F00C2B9EE /* BaseCell.swift */,
 				F171810F1ED2A8DB00C76C57 /* PropertiesCell.swift */,
 				F1934F191ED3AD8100C2B9EE /* MenuCell.swift */,
+				F1911DE61ED647F600E9A5CE /* FeedCell.swift */,
 			);
 			name = CollectionViewCells;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F15D1DE31ED50A4800EFB16B /* MockURLSession.swift in Sources */,
+				F1911DE71ED647F600E9A5CE /* FeedCell.swift in Sources */,
 				F17180DC1ED25A1600C76C57 /* PropertiesController.swift in Sources */,
 				F17181101ED2A8DB00C76C57 /* PropertiesCell.swift in Sources */,
 				F1934F1A1ED3AD8100C2B9EE /* MenuCell.swift in Sources */,
@@ -607,6 +611,7 @@
 				F15D1DDC1ED508E600EFB16B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F17180D11ED25A1600C76C57 /* Build configuration list for PBXProject "NestDemoDomain" */ = {
 			isa = XCConfigurationList;
