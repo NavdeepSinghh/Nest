@@ -45,8 +45,21 @@ class PropertiesController: UICollectionViewController{
     }()
     
     private func setupMenuBar(){
-        view.addSubview(menuBar)
+        
+        navigationController?.hidesBarsOnSwipe = true
+        
+        // View to fix abnormal scrolling
+        let backgroundFixView = UIView()
+        backgroundFixView.backgroundColor = UIColor.getColor(red: 0, green: 200, blue: 0)
+        
+        view.addSubview(backgroundFixView)
+        view.addConstraintWithFormat(format: "H:|[v0]|", views: backgroundFixView)
+        view.addConstraintWithFormat(format: "V:[v0(50)]", views: backgroundFixView)
+        
+        view.addSubview(menuBar)        
         view.addConstraintWithFormat(format: "H:|[v0]|", views: menuBar)
-        view.addConstraintWithFormat(format: "V:|[v0(50)]", views: menuBar)
+        view.addConstraintWithFormat(format: "V:[v0(50)]", views: menuBar)
+        
+        menuBar.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true       
     }
 }
