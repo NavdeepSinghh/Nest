@@ -29,8 +29,8 @@ class PropertyCell : BaseCell {
         }
     }
         
-    var propertyImageView : UIImageView = {
-        let imageView = UIImageView()
+    var propertyImageView : ImageViewCustom = {
+        let imageView = ImageViewCustom()
         imageView.image = #imageLiteral(resourceName: "Test")
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true

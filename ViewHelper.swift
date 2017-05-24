@@ -29,10 +29,22 @@ extension UIView {
     }
 }
 
-extension UIImageView {
+// Implementing cache to fetch images if already present in local cache
+let imageCache = NSCache<AnyObject, UIImage>()
+
+class ImageViewCustom :  UIImageView {
     
+    var imageUrlString : String?
     func loadImageUsingURLString(urlString: String){
+        
+        imageUrlString = urlString
         guard let url = URL(string: urlString) else {return}
+        
+        image = nil
+        if let imageFromCache = imageCache.object(forKey: urlString as AnyObject){
+            self.image = imageFromCache
+            return
+        }
         
         URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
             if let error = error {
@@ -42,7 +54,12 @@ extension UIImageView {
                 let response = response as? HTTPURLResponse,
                 response.statusCode == 200 {
                 DispatchQueue.main.async {
-                    self.image = UIImage(data: data)
+                    if let imageToBeStoredInCache = UIImage(data: data){
+                        if self.imageUrlString == urlString{
+                            self.image = imageToBeStoredInCache
+                        }                        
+                        imageCache.setObject(imageToBeStoredInCache, forKey: urlString as AnyObject)
+                    }
                 }
             }
         }).resume()
