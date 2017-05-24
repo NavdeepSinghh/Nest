@@ -12,12 +12,9 @@ let cellId = "propertyCell"
 
 class PropertiesController: UICollectionViewController{
     
-    var properties : [Property] = {
-        let property1 = Property(propertyId: 1, propertyImage: "Test.jpeg", descriptionText: "Dummy Text", isLiked: true)
-        let property2 = Property(propertyId: 2, propertyImage: "Test.jpeg", descriptionText: "Dummy text for item at index 2 and thi text is long becaue I want to test the height of the label holding this text", isLiked : true)
-        return [property1, property2]
-    }()
-
+    let apiManager = APIManager.sharedInstance()
+    var properties : [Property] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Properties"
@@ -25,6 +22,16 @@ class PropertiesController: UICollectionViewController{
         collectionView?.backgroundColor = UIColor(white: 0.95, alpha: 1)
         collectionView?.alwaysBounceVertical = true
         collectionView?.register(PropertyCell.self, forCellWithReuseIdentifier: cellId)
+        
+        // Accessing Api to get Property results for default choice
+        // TODO: Load choices depending on the UserDefaults values 
+        apiManager.getPropertyResults(for: "") { (properties, errorMessage) in
+            if let properties = properties {
+                self.properties = properties
+                self.collectionView?.reloadData()
+            }
+            if errorMessage.isEmpty {print("Search Error :" + errorMessage)}
+        }
         
         // To Re-adjust collectionView under the menubar
         collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 0, 0)
