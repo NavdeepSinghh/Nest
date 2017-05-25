@@ -8,11 +8,11 @@
 
 import UIKit
 
-let menuCellId = "menuBarCell"
-let menuBarNames = ["Rent", "Buy"]
-
 class MenuBar: UIView{
     
+    
+    let menuCellId = "menuBarCell"
+    let menuBarNames = ["Rent", "Buy"]
     var propertiesController : PropertiesController?
         
     lazy var collectionView : UICollectionView = {

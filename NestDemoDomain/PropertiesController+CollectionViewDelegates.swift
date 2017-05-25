@@ -21,7 +21,11 @@ extension PropertiesController : UICollectionViewDelegateFlowLayout {
 extension PropertiesController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdForScrollView, for: indexPath)
+        
+        if indexPath.item == 1 {
+            return collectionView.dequeueReusableCell(withReuseIdentifier: buyCellId, for: indexPath)
+        }
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: rentCell, for: indexPath)
         return cell
     }
     

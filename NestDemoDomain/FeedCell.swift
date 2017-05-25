@@ -10,8 +10,6 @@ import UIKit
 
 class FeedCell: BaseCell {
     
-    
-    let apiManager = APIManager.sharedInstance()
     var properties : [Property] = []
     let propertyCellId = "propertyCell"
 
@@ -28,7 +26,7 @@ class FeedCell: BaseCell {
         super.setupViews()
         
         // TODO: Load choices depending on the UserDefaults values
-        fetchProperties(for : "")
+        fetchProperties(for: "Rent")
         
         addSubview(collectionView)
         addConstraintWithFormat(format: "H:|[v0]|", views: collectionView)
@@ -37,8 +35,8 @@ class FeedCell: BaseCell {
         collectionView.register(PropertyCell.self, forCellWithReuseIdentifier: propertyCellId)
     }
     
-    func fetchProperties(for : String) {
-        apiManager.getPropertyResults(for: "") { (properties, errorMessage) in
+    func fetchProperties(for tab : String) {
+        APIManager.sharedInstance().getPropertyResults(for: tab) { (properties, errorMessage) in
             if let properties = properties {
                 self.properties = properties
                 self.collectionView.reloadData()
@@ -60,7 +58,7 @@ extension FeedCell : UICollectionViewDataSource{
         }
     
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! PropertyCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: propertyCellId, for: indexPath) as! PropertyCell
             cell.property = properties[indexPath.row]
             return cell
         }

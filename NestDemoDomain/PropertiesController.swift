@@ -8,26 +8,22 @@
 
 import UIKit
 
-let cellId = "propertyCell"
-let cellIdForScrollView  = "cellId"
-
 class PropertiesController: UICollectionViewController{
+    
+    
+    let rentCell  = "rentCell"
+    let buyCellId = "buyCellId"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Properties"
         navigationController?.navigationBar.isTranslucent = false
-        
-        // Accessing Api to get Property results for default choice
+        navigationController?.hidesBarsOnSwipe = true
         
         setupCollectionView()
         setupMenuBar()
     }
     
-    func scrollToMenuIndex(menuIndex: Int){
-        let indexPath = NSIndexPath(item: menuIndex, section: 0)
-        collectionView?.scrollToItem(at: indexPath as IndexPath, at: [], animated: true)
-    }
     
     lazy var menuBar : MenuBar = {
         let menu = MenuBar()
@@ -46,7 +42,8 @@ class PropertiesController: UICollectionViewController{
         
         collectionView?.backgroundColor = UIColor(white: 0.95, alpha: 1)
         collectionView?.alwaysBounceVertical = true
-        collectionView?.register(FeedCell.self, forCellWithReuseIdentifier: cellIdForScrollView)
+        collectionView?.register(FeedCell.self, forCellWithReuseIdentifier: rentCell)
+        collectionView?.register(BuyCell.self, forCellWithReuseIdentifier: buyCellId)
         
        // To Re-adjust collectionView under the menubar
         collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 0, 0)
@@ -70,5 +67,10 @@ class PropertiesController: UICollectionViewController{
         view.addConstraintWithFormat(format: "V:[v0(50)]", views: menuBar)
         
         menuBar.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true       
+    }
+    
+    func scrollToMenuIndex(menuIndex: Int){
+        let indexPath = NSIndexPath(item: menuIndex, section: 0)
+        collectionView?.scrollToItem(at: indexPath as IndexPath, at: [], animated: true)
     }
 }
