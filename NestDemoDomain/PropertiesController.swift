@@ -13,55 +13,15 @@ let cellIdForScrollView  = "cellId"
 
 class PropertiesController: UICollectionViewController{
     
-    let apiManager = APIManager.sharedInstance()
-    var properties : [Property] = []
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Properties"
         navigationController?.navigationBar.isTranslucent = false
         
         // Accessing Api to get Property results for default choice
-        // TODO: Load choices depending on the UserDefaults values
-        fetchProperties(for : "")
         
         setupCollectionView()
         setupMenuBar()
-    }
-    
-    func fetchProperties(for : String) {
-        apiManager.getPropertyResults(for: "") { (properties, errorMessage) in
-            if let properties = properties {
-                self.properties = properties
-                self.collectionView?.reloadData()
-            }
-            if errorMessage.isEmpty {print("Search Error :" + errorMessage)}
-        }
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdForScrollView, for: indexPath)
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: view.frame.height)
-    }
-    
-    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        menuBar.horizontalBarLeftConstraint?.constant = scrollView.contentOffset.x / 2
-    }
-    
-    
-    override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        
-        let index = targetContentOffset.pointee.x / view.frame.width
-        let indexpath = IndexPath(item: Int(index), section: 0)
-        menuBar.collectionView.selectItem(at: indexpath , animated: true, scrollPosition: [])
     }
     
     func scrollToMenuIndex(menuIndex: Int){
@@ -86,8 +46,6 @@ class PropertiesController: UICollectionViewController{
         
         collectionView?.backgroundColor = UIColor(white: 0.95, alpha: 1)
         collectionView?.alwaysBounceVertical = true
-        //collectionView?.register(PropertyCell.self, forCellWithReuseIdentifier: cellId)
-        //collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellIdForScrollView)
         collectionView?.register(FeedCell.self, forCellWithReuseIdentifier: cellIdForScrollView)
         
        // To Re-adjust collectionView under the menubar

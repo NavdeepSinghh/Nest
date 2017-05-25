@@ -26,8 +26,8 @@ class MenuBar: UIView{
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubview(collectionView)
         
+        addSubview(collectionView)
         collectionView.register(MenuCell.self, forCellWithReuseIdentifier: menuCellId)
         addConstraintWithFormat(format: "H:|[v0]|", views: collectionView)
         addConstraintWithFormat(format: "V:|[v0]|", views: collectionView)
