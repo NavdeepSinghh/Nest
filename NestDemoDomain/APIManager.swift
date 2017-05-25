@@ -21,6 +21,12 @@ class APIManager{
     var propertiesArray : [Property] = []
     var dataTask : URLSessionDataTask?
     
+    var requestBodyDictForRent : JSONDictionary = ["dwelling_types": ["Apartment / Unit / Flat"],
+                    "search_mode": "rent"]
+    
+    var requestBodyDictForBuy : JSONDictionary = ["dwelling_types": ["Apartment / Unit / Flat"],
+                                              "search_mode": "buy"]
+    
     // To test response from the APIManager : For testing purpose
     var defaultSession : MockURLSession = URLSession(configuration: .default)
     var errorMessage = ""
@@ -29,17 +35,17 @@ class APIManager{
         dataTask?.cancel()
         
         // Considering default case is buy
-        var requestParameters : JSONDictionary = ["dwelling_types": ["Apartment / Unit / Flat"],
-                                                  "search_mode": "buy"]
+        var requestParameters : JSONDictionary?
         
         if tab == "Rent"{
-            requestParameters = ["dwelling_types": ["Apartment / Unit / Flat"],
-                                 "search_mode": "rent"]
-    }
+            requestParameters = requestBodyDictForRent
+        }else{
+            requestParameters = requestBodyDictForBuy
+        }
         guard let url = URL(string: "https://mobile-adapter-api.domain.com.au/v1/search") else {return}
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        request.httpBody = try? JSONSerialization.data(withJSONObject: requestParameters, options: [])
+        request.httpBody = try? JSONSerialization.data(withJSONObject: requestParameters!, options: [])
         
         dataTask = defaultSession.dataTask(with: request, completionHandler: { (data, response, error) in
             defer {self.dataTask = nil}

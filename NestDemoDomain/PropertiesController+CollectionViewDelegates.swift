@@ -22,10 +22,14 @@ extension PropertiesController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        let cellIdentifier : String
+        
         if indexPath.item == 1 {
-            return collectionView.dequeueReusableCell(withReuseIdentifier: buyCellId, for: indexPath)
+            cellIdentifier = buyCellId
+        }else {
+            cellIdentifier = rentCell
         }
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: rentCell, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
         return cell
     }
     
