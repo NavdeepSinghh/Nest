@@ -18,7 +18,6 @@ class PropertiesController: UICollectionViewController{
         super.viewDidLoad()
         navigationItem.title = "Properties"
         navigationController?.navigationBar.isTranslucent = false
-        navigationController?.hidesBarsOnSwipe = true
         
         setupCollectionView()
         setupMenuBar()
@@ -70,7 +69,7 @@ class PropertiesController: UICollectionViewController{
     }
     
     func scrollToMenuIndex(menuIndex: Int){
-        let indexPath = NSIndexPath(item: menuIndex, section: 0)
+        let indexPath = IndexPath(item: menuIndex, section: 0)
         collectionView?.scrollToItem(at: indexPath as IndexPath, at: [], animated: true)
     }
 }

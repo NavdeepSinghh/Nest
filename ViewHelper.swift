@@ -30,7 +30,7 @@ extension UIView {
 }
 
 // Implementing cache to fetch images if already present in local cache
-let imageCache = NSCache<AnyObject, UIImage>()
+let imageCache = NSCache<NSString , UIImage>()
 
 class ImageViewCustom :  UIImageView {
     
@@ -41,7 +41,7 @@ class ImageViewCustom :  UIImageView {
         guard let url = URL(string: urlString) else {return}
         
         image = nil
-        if let imageFromCache = imageCache.object(forKey: urlString as AnyObject){
+        if let imageFromCache = imageCache.object(forKey: urlString as NSString){
             self.image = imageFromCache
             return
         }
@@ -58,7 +58,7 @@ class ImageViewCustom :  UIImageView {
                         if self.imageUrlString == urlString{
                             self.image = imageToBeStoredInCache
                         }                        
-                        imageCache.setObject(imageToBeStoredInCache, forKey: urlString as AnyObject)
+                        imageCache.setObject(imageToBeStoredInCache, forKey: urlString as NSString)
                     }
                 }
             }

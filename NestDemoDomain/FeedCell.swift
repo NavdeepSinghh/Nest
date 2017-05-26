@@ -41,7 +41,7 @@ class FeedCell: BaseCell {
                 self.properties = properties
                 self.collectionView.reloadData()
             }
-            if errorMessage.isEmpty {print("Search Error :" + errorMessage)}
+            if !errorMessage.isEmpty {print("Search Error :" + errorMessage)}
         }
     }
 }
@@ -65,6 +65,7 @@ extension FeedCell : UICollectionViewDataSource{
 }
 
 extension FeedCell : UICollectionViewDelegateFlowLayout{
+    
     
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     

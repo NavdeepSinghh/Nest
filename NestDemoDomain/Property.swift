@@ -14,12 +14,29 @@ class Property: NSObject {
     var descriptionText : String?
     var isLiked : Bool?
     
-    // initializer
-    init(propertyId: Int, propertyImageURLString : String, descriptionText : String, isLiked : Bool) {
-        self.propertyID = propertyId
-        self.propertyImageURLString = propertyImageURLString
-        self.descriptionText = descriptionText
-        self.isLiked = isLiked
+    var imagesArray : [String]?
+    
+    override func setValue(_ value: Any?, forKey key: String) {
+        if key == "id" {
+            self.propertyID = value as? Int
+        } else if key == "headline"{
+            self.descriptionText = value as? String
+        }else if key == "media"{
+            let mediaDictionary = value as? [[String: Any]]
+            if let mediaDictionary = mediaDictionary{
+                if !mediaDictionary.isEmpty{
+                    // Getting first image_url from the available dictionary
+                    if  let image_url = mediaDictionary[0]["image_url"] as? String{
+                        self.propertyImageURLString = image_url
+                    }
+                }
+            }
+        }
+        self.isLiked = true
     }
     
+    init(dictionary : [String: AnyObject]) {
+        super.init()
+        setValuesForKeys(dictionary)
+    }
 }

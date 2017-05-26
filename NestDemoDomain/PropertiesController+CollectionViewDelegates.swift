@@ -40,7 +40,7 @@ extension PropertiesController {
 
 // UIScollViewDelegate methods
 extension PropertiesController {
-    
+        
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         menuBar.horizontalBarLeftConstraint?.constant = scrollView.contentOffset.x / 2
     }

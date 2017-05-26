@@ -20,10 +20,8 @@ class APIManager{
     
     var propertiesArray : [Property] = []
     var dataTask : URLSessionDataTask?
-    
     var requestBodyDictForRent : JSONDictionary = ["dwelling_types": ["Apartment / Unit / Flat"],
                     "search_mode": "rent"]
-    
     var requestBodyDictForBuy : JSONDictionary = ["dwelling_types": ["Apartment / Unit / Flat"],
                                               "search_mode": "buy"]
     
@@ -35,18 +33,15 @@ class APIManager{
         dataTask?.cancel()
         
         // Considering default case is buy
-        var requestParameters : JSONDictionary?
+        var requestParameters : JSONDictionary
         
         if tab == "Rent"{
             requestParameters = requestBodyDictForRent
         }else{
             requestParameters = requestBodyDictForBuy
         }
-        guard let url = URL(string: "https://mobile-adapter-api.domain.com.au/v1/search") else {return}
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.httpBody = try? JSONSerialization.data(withJSONObject: requestParameters!, options: [])
-        
+        // Getting the request from Request Router
+        var request = PropertiesRequestRouter.create(requestParameters).asURLRequest()
         dataTask = defaultSession.dataTask(with: request, completionHandler: { (data, response, error) in
             defer {self.dataTask = nil}
             
@@ -55,10 +50,13 @@ class APIManager{
             } else if let data = data,
             let response = response as? HTTPURLResponse,
                 response.statusCode == 200 {
-                // To Silence the warning 
-                _ = self.updatePropertiesSearchResults(with: data)
+                self.updatePropertiesSearchResults(with: data)
                 DispatchQueue.main.async {
                     completion(self.propertiesArray, self.errorMessage)
+                }
+            } else{
+                if let res = response as? HTTPURLResponse{
+                    print(res.statusCode )
                 }
             }
         })
@@ -79,35 +77,14 @@ class APIManager{
             return
         }
         
-        guard let array = response!["search_results"] as? [Any] else {
+        guard let array = response!["search_results"] as? [[String: AnyObject]] else {
             errorMessage += "Dictionary does not contain search_results key \n"
             return
-        }
+        }       
         
-        for propertyDictionary in array {
-            if let propertyDictionary = propertyDictionary as? JSONDictionary,
-            let id = propertyDictionary["id"] as? Int,
-                let description = propertyDictionary["headline"] as? String{
-                // Get thumbnail from first media element
-                
-                if let mediaArray = propertyDictionary["media"] as? [JSONDictionary]{
-                    var imageURL = ""
-                    for index in 0..<mediaArray.count{
-                        let media = mediaArray[index]
-                        if let image_url = media["image_url"] as? String{
-                            if index == 0 {
-                                imageURL = image_url
-                            }
-                        }
-                    }
-                    // TODO: change the property on isLiked here it self by comparing it with store array of Userdefaults
-                    propertiesArray.append(Property(propertyId: id, propertyImageURLString: imageURL, descriptionText: description, isLiked: false))
-                }else{
-                    errorMessage += "Error parsing the media dcitionary \n"
-                }
-            } else{
-                errorMessage += "Error parsing the search_results dictionary \n"
-            }
+        for propertyDictionary in array  {            
+            let property = Property(dictionary : propertyDictionary)
+            propertiesArray.append(property)
         }
     }
 }
