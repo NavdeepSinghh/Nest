@@ -10,14 +10,22 @@ import UIKit
 
 class PropertyCell : BaseCell {
     
-    var property : Property? {
+    let appdelegate = UIApplication.shared.delegate as! AppDelegate    
+    
+       var property : Property? {
         didSet {
-            self.descriptionLabel.text = property?.descriptionText
-            setupPropertyImage()
-            if (property?.isLiked) != nil {
-                 // setup likedImageView Accordingly
-            }else {
+            
+            if let property = property {
+                self.descriptionLabel.text = property.descriptionText
+                setupPropertyImage()
                 
+                if let id = property.propertyID {
+                    if (appdelegate.set.contains(id)){
+                        likedImageView.setImage(#imageLiteral(resourceName: "selected"), for: .normal)
+                    }else {
+                        likedImageView.setImage(#imageLiteral(resourceName: "unselected"), for: .normal)
+                    }
+                }
             }
         }
     }
@@ -38,16 +46,18 @@ class PropertyCell : BaseCell {
         return imageView
     }()
     
-    var likedImageView : UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = #imageLiteral(resourceName: "star")
+    var likedImageView : UIButton = {
+        let imageView = UIButton()
+        imageView.setImage(#imageLiteral(resourceName: "unselected"), for: .normal)
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 22
         imageView.layer.masksToBounds = true
         
+        
         return imageView
     }()
+    
     
     var descriptionLabel : UILabel = {
         let label = UILabel()
@@ -66,14 +76,32 @@ class PropertyCell : BaseCell {
         return view
     }()
     
+    func pressed() {
+        
+        if let property = property{
+            if let id = property.propertyID {
+                if (appdelegate.set.contains(id)){
+                    appdelegate.set.remove(id)
+                    likedImageView.setImage(#imageLiteral(resourceName: "unselected"), for: .normal)
+                }else{
+                    appdelegate.set.insert(id)
+                    likedImageView.setImage(#imageLiteral(resourceName: "selected"), for: .normal)
+                }
+            }
+        }
+   }
+    
     override func setupViews(){
         backgroundColor = UIColor.white
+        
+        likedImageView.addTarget(self, action: #selector(self.pressed), for: .touchUpInside)
         
         // Add subviews 
         addSubview(propertyImageView)
         addSubview(descriptionLabel)
         addSubview(likedImageView)
         addSubview(separatorView)
+        
     
         // Horizontal Constraints
         

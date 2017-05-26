@@ -29,7 +29,8 @@ extension PropertiesController {
         }else {
             cellIdentifier = rentCell
         }
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) 
+        
         return cell
     }
     

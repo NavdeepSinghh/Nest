@@ -312,6 +312,7 @@
 					};
 					F17180D51ED25A1600C76C57 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = J7285MX229;
 						ProvisioningStyle = Automatic;
 					};
 					F1934F291ED3E66E00C2B9EE = {
@@ -563,6 +564,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J7285MX229;
 				INFOPLIST_FILE = NestDemoDomain/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Navdeep.NestDemoDomain;
@@ -575,6 +577,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J7285MX229;
 				INFOPLIST_FILE = NestDemoDomain/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Navdeep.NestDemoDomain;

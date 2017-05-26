@@ -12,8 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    var set : Set<Int>!
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -40,7 +39,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.addConstraintWithFormat(format: "H:|[v0]|", views: statusBarBackgroundView)
         window?.addConstraintWithFormat(format: "V:|[v0(20)]", views: statusBarBackgroundView)
         
+        // To maintain the state of the likes in app
+        set = Set<Int> ()
+        if let arrayFromUserDefaults = UserDefaults.standard.array(forKey: "likedProperties") as? [Int] {
+            set = Set(arrayFromUserDefaults.map{
+                return $0
+            })
+        }
         return true
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        // Saving the liked state when the app goes to background
+        let arrayOfIds : [Int] = set.map{
+            return $0
+        }
+        UserDefaults.standard.set(arrayOfIds, forKey: "likedProperties")
     }
 }
 

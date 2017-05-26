@@ -33,7 +33,7 @@ class Property: NSObject {
                 }
             }
         }
-        self.isLiked = true
+        self.isLiked = false
     }
     
     init(dictionary : [String: AnyObject]) {

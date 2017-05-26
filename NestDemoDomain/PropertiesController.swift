@@ -19,6 +19,7 @@ class PropertiesController: UICollectionViewController{
         navigationItem.title = "Properties"
         navigationController?.navigationBar.isTranslucent = false
         
+        
         setupCollectionView()
         setupMenuBar()
     }
