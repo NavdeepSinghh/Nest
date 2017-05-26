@@ -19,11 +19,12 @@ class Property: NSObject {
     override func setValue(_ value: Any?, forKey key: String) {
         if key == "id" {
             self.propertyID = value as? Int
+            // If no ID is present we can't save like state for that property
+            return
         } else if key == "headline"{
             self.descriptionText = value as? String
         }else if key == "media"{
-            let mediaDictionary = value as? [[String: Any]]
-            if let mediaDictionary = mediaDictionary{
+           if let mediaDictionary = value as? [[String: Any]]{
                 if !mediaDictionary.isEmpty{
                     // Getting first image_url from the available dictionary
                     if  let image_url = mediaDictionary[0]["image_url"] as? String{
