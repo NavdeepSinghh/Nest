@@ -80,11 +80,13 @@ class APIManager{
         guard let array = response!["search_results"] as? [[String: AnyObject]] else {
             errorMessage += "Dictionary does not contain search_results key \n"
             return
-        }       
-        
-        for propertyDictionary in array  {            
-            let property = Property(dictionary : propertyDictionary)
-            propertiesArray.append(property)
         }
+        
+        // FP to refractor 
+        propertiesArray = array.map({
+                return Property(dictionary: $0)
+            })
+            
+          
     }
 }
