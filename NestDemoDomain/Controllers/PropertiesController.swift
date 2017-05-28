@@ -13,13 +13,15 @@ class PropertiesController: UICollectionViewController{
     
     let rentCell  = "rentCell"
     let buyCellId = "buyCellId"
+    let delegate = UIApplication.shared.delegate as! AppDelegate
+    var rightButton = UINavigationItem(title: "test")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Properties"
         navigationController?.navigationBar.isTranslucent = false
         
-        
+        setupNavBarButtons()
         setupCollectionView()
         setupMenuBar()
     }
@@ -67,6 +69,13 @@ class PropertiesController: UICollectionViewController{
         view.addConstraintWithFormat(format: "V:[v0(50)]", views: menuBar)
         
         menuBar.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true       
+    }
+    
+    private func setupNavBarButtons() {
+        rightButton = navigationItem
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Likes: \(delegate.set.count)", style: UIBarButtonItemStyle.plain, target: self, action: nil)
+        navigationItem.rightBarButtonItem?.tintColor = UIColor.white
+        addObserver(self, forKeyPath: #keyPath(delegate.set), options: [.old, .new], context: nil)
     }
     
     func scrollToMenuIndex(menuIndex: Int){

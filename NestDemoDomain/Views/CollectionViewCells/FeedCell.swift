@@ -12,6 +12,9 @@ class FeedCell: BaseCell {
     
     var properties : [Property] = []
     let propertyCellId = "propertyCell"
+    var navItem = UINavigationItem(title: "Test")
+    var horizontalSize : UIUserInterfaceSizeClass?
+    var verticalSize : UIUserInterfaceSizeClass?
 
     lazy var collectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -44,6 +47,12 @@ class FeedCell: BaseCell {
             if !errorMessage.isEmpty {print("Search Error :" + errorMessage)}
         }
     }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        horizontalSize = traitCollection.horizontalSizeClass
+        collectionView.reloadData()
+    }
+    
 }
 
 extension FeedCell : UICollectionViewDelegate {
@@ -60,18 +69,25 @@ extension FeedCell : UICollectionViewDataSource{
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: propertyCellId, for: indexPath) as! PropertyCell
             cell.property = properties[indexPath.row]
+            cell.navItem = self.navItem
             return cell
         }
 }
+
 
 extension FeedCell : UICollectionViewDelegateFlowLayout{
     
     
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     
-            // Adjusting accroding to the screen ratios available
-            let height = (frame.width - 32) * 9 / 16
-            return CGSize(width: frame.width, height: height + 16 + 68)
+            var height = (frame.width - 32) * 9 / 16 + 16 + 68
+            var width = frame.width
+            if horizontalSize == .regular {
+                height = (frame.width/2 - 16) * 9 / 16 + 16 + 68
+                width = width / 2.03
+            }
+            // Adjusting according to the screen ratios available
+            return CGSize(width: width, height: height )
         }
     
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

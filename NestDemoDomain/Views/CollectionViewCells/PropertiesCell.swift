@@ -10,7 +10,8 @@ import UIKit
 
 class PropertyCell : BaseCell {
     
-    let appdelegate = UIApplication.shared.delegate as! AppDelegate    
+    let appdelegate = UIApplication.shared.delegate as! AppDelegate
+    var navItem = UINavigationItem(title: "Likes:")
     
        var property : Property? {
         didSet {
@@ -23,7 +24,7 @@ class PropertyCell : BaseCell {
                     if (appdelegate.set.contains(id)){
                         likedImageView.setImage(#imageLiteral(resourceName: "selected"), for: .normal)
                     }else {
-                        likedImageView.setImage(#imageLiteral(resourceName: "unselected"), for: .normal)
+                        likedImageView.setImage(#imageLiteral(resourceName: "unselected"), for: .normal)                
                     }
                 }
             }
@@ -79,6 +80,7 @@ class PropertyCell : BaseCell {
     func pressed() {
         
         if let property = property{
+            
             if let id = property.propertyID {
                 if (appdelegate.set.contains(id)){
                     appdelegate.set.remove(id)
@@ -87,9 +89,12 @@ class PropertyCell : BaseCell {
                     appdelegate.set.insert(id)
                     likedImageView.setImage(#imageLiteral(resourceName: "selected"), for: .normal)
                 }
+                navItem.rightBarButtonItem = UIBarButtonItem(title: "Likes: \(appdelegate.set.count)", style: UIBarButtonItemStyle.plain, target: self, action: nil)
+                navItem.rightBarButtonItem?.tintColor = UIColor.white
             }
         }
    }
+    
     
     override func setupViews(){
         backgroundColor = UIColor.white
@@ -106,6 +111,7 @@ class PropertyCell : BaseCell {
         // Horizontal Constraints
         
         //Horizontal Constraints
+        
         addConstraintWithFormat(format: "H:|-16-[v0]-16-|", views: propertyImageView)
         addConstraintWithFormat(format: "H:|-16-[v0(44)]", views: likedImageView)
         //Vertical Constraints

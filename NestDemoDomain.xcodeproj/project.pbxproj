@@ -58,9 +58,9 @@
 		F17180D61ED25A1600C76C57 /* NestDemoDomain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NestDemoDomain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F17180D91ED25A1600C76C57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F17180DB1ED25A1600C76C57 /* PropertiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesController.swift; sourceTree = "<group>"; };
-		F17180E01ED25A1600C76C57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = NestDemoDomain/Assets.xcassets; sourceTree = "<group>"; };
+		F17180E01ED25A1600C76C57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F17180E31ED25A1600C76C57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F17180E51ED25A1600C76C57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = NestDemoDomain/Info.plist; sourceTree = "<group>"; };
+		F17180E51ED25A1600C76C57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../NestDemoDomain/Info.plist; sourceTree = "<group>"; };
 		F171810F1ED2A8DB00C76C57 /* PropertiesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertiesCell.swift; sourceTree = "<group>"; };
 		F17181131ED2D76C00C76C57 /* ViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHelper.swift; sourceTree = "<group>"; };
 		F1911DE61ED647F600E9A5CE /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 				F17180DB1ED25A1600C76C57 /* PropertiesController.swift */,
 				F1934F241ED3C5E100C2B9EE /* PropertiesController+CollectionViewDelegates.swift */,
 			);
-			name = Controllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		F17181111ED2D33C00C76C57 /* CollectionViewCells */ = {
@@ -180,7 +180,7 @@
 				F1911DE61ED647F600E9A5CE /* FeedCell.swift */,
 				F1911DE81ED6622C00E9A5CE /* BuyCell.swift */,
 			);
-			name = CollectionViewCells;
+			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
 		F17181121ED2D35700C76C57 /* Views */ = {
@@ -190,7 +190,7 @@
 				F1934F221ED3C58900C2B9EE /* MenuBar+DelegateMethods.swift */,
 				F17181111ED2D33C00C76C57 /* CollectionViewCells */,
 			);
-			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		F1934F1D1ED3BB3500C2B9EE /* SupportingFiles */ = {
@@ -202,7 +202,7 @@
 				F17181131ED2D76C00C76C57 /* ViewHelper.swift */,
 				F15D1DE21ED50A4800EFB16B /* MockURLSession.swift */,
 			);
-			name = SupportingFiles;
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		F1934F1E1ED3BB5300C2B9EE /* AppDelegate */ = {
@@ -210,7 +210,7 @@
 			children = (
 				F17180D91ED25A1600C76C57 /* AppDelegate.swift */,
 			);
-			name = AppDelegate;
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 		F1934F1F1ED3BB6E00C2B9EE /* Model */ = {
@@ -218,7 +218,7 @@
 			children = (
 				F1934F201ED3BBA000C2B9EE /* Property.swift */,
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F1934F2B1ED3E66E00C2B9EE /* NestDemoDomainAsyncTests */ = {
@@ -236,7 +236,7 @@
 				F1934F341ED3F21E00C2B9EE /* APIManager.swift */,
 				F1911DEA1ED6AE8800E9A5CE /* PropertiesRequestRouter.swift */,
 			);
-			name = Networking;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,7 +433,7 @@
 				F17180E31ED25A1600C76C57 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			path = NestDemoDomain;
+			path = ../NestDemoDomain;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
