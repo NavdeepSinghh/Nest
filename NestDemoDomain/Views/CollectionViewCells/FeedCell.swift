@@ -13,8 +13,21 @@ class FeedCell: BaseCell {
     var properties : [Property] = []
     let propertyCellId = "propertyCell"
     var navItem = UINavigationItem(title: "Test")
-    var horizontalSize : UIUserInterfaceSizeClass?
-    var verticalSize : UIUserInterfaceSizeClass?
+    
+    // Calculate the horizontal cell size using size classes
+    var height : CGFloat!
+    var width : CGFloat!
+    fileprivate var aspectRatio : CGSize{
+        switch traitCollection.horizontalSizeClass {
+        case .compact:
+            height = (frame.width - 32) * 9 / 16 + 16 + 68
+            width = frame.width
+        default:
+            height = (frame.width / 2 - 16) * 9 / 16 + 16 + 68
+            width = frame.width / 2.03
+            }
+        return CGSize(width: width, height: height)
+    }
 
     lazy var collectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -48,11 +61,6 @@ class FeedCell: BaseCell {
         }
     }
     
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        horizontalSize = traitCollection.horizontalSizeClass
-        collectionView.reloadData()
-    }
-    
 }
 
 extension FeedCell : UICollectionViewDelegate {
@@ -74,20 +82,13 @@ extension FeedCell : UICollectionViewDataSource{
         }
 }
 
-
 extension FeedCell : UICollectionViewDelegateFlowLayout{
     
     
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     
-            var height = (frame.width - 32) * 9 / 16 + 16 + 68
-            var width = frame.width
-            if horizontalSize == .regular {
-                height = (frame.width/2 - 16) * 9 / 16 + 16 + 68
-                width = width / 2.03
-            }
             // Adjusting according to the screen ratios available
-            return CGSize(width: width, height: height )
+            return aspectRatio
         }
     
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
