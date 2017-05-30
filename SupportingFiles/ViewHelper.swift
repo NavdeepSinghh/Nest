@@ -8,7 +8,17 @@
 
 import UIKit
 
-//convenience method to get UIColor value 
+extension UIAlertController {
+    static func createAlert(message : String) -> UIAlertController{
+        let alert = UIAlertController.init(title: "Warniing!!!", message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: { (_) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        return alert
+    }
+}
+
+//convenience method to get UIColor value
 extension UIColor {
     static func getColor(red: CGFloat, green : CGFloat, blue : CGFloat) -> UIColor{
         return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1)
@@ -48,7 +58,7 @@ class ImageViewCustom :  UIImageView {
         
         URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
             if let error = error {
-                print(error.localizedDescription)
+                print(error)
                 return
             } else if let data = data,
                 let response = response as? HTTPURLResponse,

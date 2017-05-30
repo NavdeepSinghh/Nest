@@ -13,7 +13,7 @@ class MenuCell: BaseCell {
     var menuItemText : String? {
         didSet {
             if UserDefaults.standard.string(forKey: "selectedMenuItem") == self.menuItemText {
-                self.menuBarItemLabel.textColor = UIColor.white
+                self.menuBarItemLabel.textColor = UIColor.white                
             } else {
                 self.menuBarItemLabel.textColor = UIColor.darkGray
             }
@@ -36,7 +36,9 @@ class MenuCell: BaseCell {
     
     override var isSelected: Bool {
         didSet {
-            UserDefaults.standard.set(self.menuBarItemLabel.text, forKey: "selectedMenuItem")
+            if isSelected {
+                UserDefaults.standard.set(self.menuBarItemLabel.text, forKey: "selectedMenuItem")
+            }
             menuBarItemLabel.textColor = isSelected ? UIColor.white : UIColor.darkGray
         }
     }

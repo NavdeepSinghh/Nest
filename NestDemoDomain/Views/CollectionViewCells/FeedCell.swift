@@ -52,15 +52,17 @@ class FeedCell: BaseCell {
     }
     
     func fetchProperties(for tab : String) {
-        APIManager.sharedInstance().getPropertyResults(for: tab) { (properties, errorMessage) in
-            if let properties = properties {
-                self.properties = properties
+        APIManager.sharedInstance().getPropertyResults(for: tab) {result in
+            switch result {
+        case let .success(propertiesArray):
+            self.properties = propertiesArray
+            DispatchQueue.main.async {                
                 self.collectionView.reloadData()
             }
-            if !errorMessage.isEmpty {print("Search Error :" + errorMessage)}
+        case let .failure(error) : print(error)
+            }
         }
     }
-    
 }
 
 extension FeedCell : UICollectionViewDelegate {

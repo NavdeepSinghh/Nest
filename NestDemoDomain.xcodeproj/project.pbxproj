@@ -19,6 +19,13 @@
 		F17180E41ED25A1600C76C57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17180E21ED25A1600C76C57 /* LaunchScreen.storyboard */; };
 		F17181101ED2A8DB00C76C57 /* PropertiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F171810F1ED2A8DB00C76C57 /* PropertiesCell.swift */; };
 		F17181141ED2D76C00C76C57 /* ViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17181131ED2D76C00C76C57 /* ViewHelper.swift */; };
+		F17D07BE1EDCEF7C00CF5A15 /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17D07BD1EDCEF7C00CF5A15 /* APIErrors.swift */; };
+		F17D07BF1EDCF37600CF5A15 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1934F341ED3F21E00C2B9EE /* APIManager.swift */; };
+		F17D07C01EDD10EE00CF5A15 /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17D07BD1EDCEF7C00CF5A15 /* APIErrors.swift */; };
+		F17D07C11EDD113800CF5A15 /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17D07BD1EDCEF7C00CF5A15 /* APIErrors.swift */; };
+		F17D07C21EDD115800CF5A15 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1934F201ED3BBA000C2B9EE /* Property.swift */; };
+		F17D07C31EDD116D00CF5A15 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D1DE21ED50A4800EFB16B /* MockURLSession.swift */; };
+		F17D07C41EDD118100CF5A15 /* PropertiesRequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1911DEA1ED6AE8800E9A5CE /* PropertiesRequestRouter.swift */; };
 		F1911DE71ED647F600E9A5CE /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1911DE61ED647F600E9A5CE /* FeedCell.swift */; };
 		F1911DE91ED6622C00E9A5CE /* BuyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1911DE81ED6622C00E9A5CE /* BuyCell.swift */; };
 		F1911DEB1ED6AE8800E9A5CE /* PropertiesRequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1911DEA1ED6AE8800E9A5CE /* PropertiesRequestRouter.swift */; };
@@ -30,6 +37,7 @@
 		F1934F251ED3C5E100C2B9EE /* PropertiesController+CollectionViewDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1934F241ED3C5E100C2B9EE /* PropertiesController+CollectionViewDelegates.swift */; };
 		F1934F2D1ED3E66E00C2B9EE /* NestDemoDomainAsyncTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1934F2C1ED3E66E00C2B9EE /* NestDemoDomainAsyncTests.swift */; };
 		F1934F351ED3F21E00C2B9EE /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1934F341ED3F21E00C2B9EE /* APIManager.swift */; };
+		F1C66D901EDABC5700D3FD38 /* PropertiesRequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1911DEA1ED6AE8800E9A5CE /* PropertiesRequestRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +71,7 @@
 		F17180E51ED25A1600C76C57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../NestDemoDomain/Info.plist; sourceTree = "<group>"; };
 		F171810F1ED2A8DB00C76C57 /* PropertiesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertiesCell.swift; sourceTree = "<group>"; };
 		F17181131ED2D76C00C76C57 /* ViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHelper.swift; sourceTree = "<group>"; };
+		F17D07BD1EDCEF7C00CF5A15 /* APIErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIErrors.swift; sourceTree = "<group>"; };
 		F1911DE61ED647F600E9A5CE /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		F1911DE81ED6622C00E9A5CE /* BuyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyCell.swift; sourceTree = "<group>"; };
 		F1911DEA1ED6AE8800E9A5CE /* PropertiesRequestRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertiesRequestRouter.swift; sourceTree = "<group>"; };
@@ -193,6 +202,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		F17D07BC1EDCEF3D00CF5A15 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				F17D07BD1EDCEF7C00CF5A15 /* APIErrors.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
 		F1934F1D1ED3BB3500C2B9EE /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +250,7 @@
 		F1934F361ED3F22700C2B9EE /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				F17D07BC1EDCEF3D00CF5A15 /* Errors */,
 				F1934F341ED3F21E00C2B9EE /* APIManager.swift */,
 				F1911DEA1ED6AE8800E9A5CE /* PropertiesRequestRouter.swift */,
 			);
@@ -375,9 +393,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F15D1DE51ED50E3200EFB16B /* APIManager.swift in Sources */,
+				F1C66D901EDABC5700D3FD38 /* PropertiesRequestRouter.swift in Sources */,
 				F15D1DE41ED50A4800EFB16B /* MockURLSession.swift in Sources */,
 				F15D1DE61ED50FCA00EFB16B /* Property.swift in Sources */,
 				F15D1DD71ED508E600EFB16B /* NestDemoDomainMockTests.swift in Sources */,
+				F17D07C01EDD10EE00CF5A15 /* APIErrors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +406,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F15D1DE31ED50A4800EFB16B /* MockURLSession.swift in Sources */,
+				F17D07BE1EDCEF7C00CF5A15 /* APIErrors.swift in Sources */,
 				F1911DEB1ED6AE8800E9A5CE /* PropertiesRequestRouter.swift in Sources */,
 				F1911DE71ED647F600E9A5CE /* FeedCell.swift in Sources */,
 				F17180DC1ED25A1600C76C57 /* PropertiesController.swift in Sources */,
@@ -407,7 +428,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F17D07BF1EDCF37600CF5A15 /* APIManager.swift in Sources */,
+				F17D07C41EDD118100CF5A15 /* PropertiesRequestRouter.swift in Sources */,
 				F1934F2D1ED3E66E00C2B9EE /* NestDemoDomainAsyncTests.swift in Sources */,
+				F17D07C21EDD115800CF5A15 /* Property.swift in Sources */,
+				F17D07C31EDD116D00CF5A15 /* MockURLSession.swift in Sources */,
+				F17D07C11EDD113800CF5A15 /* APIErrors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

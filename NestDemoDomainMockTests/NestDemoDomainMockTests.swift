@@ -41,7 +41,7 @@ class NestDemoDomainMockTests: XCTestCase {
         
         // When
         XCTAssertEqual(apiManagerUnderTest.propertiesArray.count,0, "Empty properties array before the task begins")
-        apiManagerUnderTest.getPropertyResults(for :""){_,_ in
+        apiManagerUnderTest.getPropertyResults(for :""){_ in
             promise.fulfill()
         }
         waitForExpectations(timeout: 5, handler: nil)

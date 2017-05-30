@@ -19,7 +19,6 @@ class Property: NSObject {
     override func setValue(_ value: Any?, forKey key: String) {
         if key == "id" {
             self.propertyID = value as? Int
-            // If no ID is present we can't save like state for that property
             return
         } else if key == "headline"{
             self.descriptionText = value as? String
@@ -35,6 +34,7 @@ class Property: NSObject {
         }
         self.isLiked = false
     }
+    
     
     init(dictionary : [String: AnyObject]) {
         super.init()

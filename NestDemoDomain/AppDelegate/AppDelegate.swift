@@ -39,6 +39,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.addConstraintWithFormat(format: "H:|[v0]|", views: statusBarBackgroundView)
         window?.addConstraintWithFormat(format: "V:|[v0(20)]", views: statusBarBackgroundView)
         
+        // For default selected MenuBarItem
+        if UserDefaults.standard.string(forKey: "selectedMenuItem") == nil {
+            UserDefaults.standard.set("Rent", forKey: "selectedMenuItem")
+        }
+        
         // To maintain the state of the likes in app
         set = Set<Int> ()
         if let arrayFromUserDefaults = UserDefaults.standard.array(forKey: "likedProperties") as? [Int] {

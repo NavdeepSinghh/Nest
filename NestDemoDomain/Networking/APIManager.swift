@@ -10,7 +10,9 @@ import Foundation
 import UIKit
 
 typealias JSONDictionary = [String: Any]
-typealias QueryResult = ([Property]?, String)->()
+typealias FetchResult = Result<[Property], APIErrors>
+typealias QueryCompletion = (_ result : FetchResult) -> Void
+typealias QueryResult = ([Property]?, APIErrors?)->()
 
 class APIManager{
     static let _sharedinstance = APIManager()
@@ -27,9 +29,8 @@ class APIManager{
     
     // To test response from the APIManager : For testing purpose
     var defaultSession : MockURLSession = URLSession(configuration: .default)
-    var errorMessage = ""
     
-    func getPropertyResults(for tab: String, completion: @escaping QueryResult){
+    func getPropertyResults(for tab: String, completion: @escaping QueryCompletion){
         dataTask?.cancel()
         
         // Considering default case is buy
@@ -45,18 +46,21 @@ class APIManager{
         dataTask = defaultSession.dataTask(with: request, completionHandler: { (data, response, error) in
             defer {self.dataTask = nil}
             
-            if let error = error {
-                self.errorMessage += "Datatask error:" + error.localizedDescription + "\n"
+            if error != nil {
+                completion(.failure(.requestFailed(error: error! as NSError)))
+                return
             } else if let data = data,
             let response = response as? HTTPURLResponse,
                 response.statusCode == 200 {
-                self.updatePropertiesSearchResults(with: data)
-                DispatchQueue.main.async {
-                    completion(self.propertiesArray, self.errorMessage)
+                self.updatePropertiesSearchResults(with: data){ result in
+                    switch result {
+                    case let .success(propertiesArray): completion(.success(propertiesArray))
+                    case let .failure(error) : completion(.failure(error))
+                    }
                 }
             } else{
-                if let res = response as? HTTPURLResponse{
-                    print(res.statusCode )
+                if (response as? HTTPURLResponse) != nil{
+                    completion(.failure(.responseUnsuccessful))
                 }
             }
         })
@@ -65,28 +69,27 @@ class APIManager{
     
     
     // Helper methd to convert data to response dictionary
-    func updatePropertiesSearchResults(with data: Data) {
+    func updatePropertiesSearchResults(with data: Data, completion: QueryCompletion) {
         var response : JSONDictionary?
         
         propertiesArray.removeAll()
         
         do{
             response = try JSONSerialization.jsonObject(with: data, options: []) as? JSONDictionary
-        }catch let parseError as NSError {
-            errorMessage += "JSONSerialization error: \(parseError.localizedDescription)"
-            return
+        }catch _ as NSError {
+           completion(.failure(.jsonConversionFailure))
+           return
         }
         
         guard let array = response!["search_results"] as? [[String: AnyObject]] else {
-            errorMessage += "Dictionary does not contain search_results key \n"
+            completion(.failure(.jsonParsingFailure))
             return
         }
         
-        // FP to refractor 
-        propertiesArray = array.map({
-                return Property(dictionary: $0)
-            })
-            
-          
+        // FP to refractor and remove any Properties if the id is nil 
+        propertiesArray = array.map{
+                Property(dictionary: $0)
+            }.filter{$0.propertyID != nil}
+        completion(.success(self.propertiesArray))
     }
 }

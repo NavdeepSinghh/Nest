@@ -25,12 +25,8 @@ class NestDemoDomainAsyncTests: XCTestCase {
     // Slow failure Async test : BUY
     func testValidCallToDomainAPIGetsStatusCodeForBuy200(){
         // Given 
-        let url = URL(string: "https://mobile-adapter-api.domain.com.au/v1/search")
-        var request = URLRequest(url: url!)
-        request.httpMethod = "POST"
-        let requestParametersForBuy : [String : Any] = ["dwelling_types": ["Apartment / Unit / Flat"],
-                                                  "search_mode": "buy"]
-        request.httpBody = try? JSONSerialization.data(withJSONObject: requestParametersForBuy, options: [])
+        let request = PropertiesRequestRouter.create(["dwelling_types": ["Apartment / Unit / Flat"],
+                                                      "search_mode": "buy"]).asURLRequest()
         let promise = expectation(description: "Status code : 200")
         
         // when
@@ -53,12 +49,8 @@ class NestDemoDomainAsyncTests: XCTestCase {
     // Slow failure Async test : RENT
     func testValidCallToDomainAPIGetsStatusCodeForRent200(){
         // Given
-        let url = URL(string: "https://mobile-adapter-api.domain.com.au/v1/search")
-        var request = URLRequest(url: url!)
-        request.httpMethod = "POST"
-        let requestParametersForBuy : [String : Any] = ["dwelling_types": ["Apartment / Unit / Flat"],
-                                                        "search_mode": "rent"]
-        request.httpBody = try? JSONSerialization.data(withJSONObject: requestParametersForBuy, options: [])
+        let request = PropertiesRequestRouter.create(["dwelling_types": ["Apartment / Unit / Flat"],
+                                                      "search_mode": "rent"]).asURLRequest()
         let promise = expectation(description: "Status code : 200")
         
         // when
@@ -82,13 +74,9 @@ class NestDemoDomainAsyncTests: XCTestCase {
     
     // Fast Fail : One consolidated call for both 
     func testCallToDomainServerCompletes() {
-        //  // Given
-        let url = URL(string: "https://mobile-adapter-api.domain.com.au/v1/search")
-        var request = URLRequest(url: url!)
-        request.httpMethod = "POST"
-        let requestParametersForBuy : [String : Any] = ["dwelling_types": ["Apartment / Unit / Flat"],
-                                                        "search_mode": "rent"]
-        request.httpBody = try? JSONSerialization.data(withJSONObject: requestParametersForBuy, options: [])
+        // Given
+        let request = PropertiesRequestRouter.create(["dwelling_types": ["Apartment / Unit / Flat"],
+                                                      "search_mode": "rent"]).asURLRequest()
         let promise = expectation(description: "Call completes immediately by invoking completion handler")
         var statusCode : Int?
         var responseError : Error?

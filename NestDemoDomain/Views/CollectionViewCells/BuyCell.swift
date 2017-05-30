@@ -9,14 +9,17 @@
 import UIKit
 
 class BuyCell: FeedCell {
-
+    
     override func fetchProperties(for: String) {
-        APIManager._sharedinstance.getPropertyResults(for: "") { (properties, errorMessage) in
-            if let properties = properties {
-                self.properties = properties
-                self.collectionView.reloadData()
+        APIManager._sharedinstance.getPropertyResults(for: "") { result in
+            switch result {
+            case let .success(propertiesArray):
+                self.properties = propertiesArray
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            case let .failure(error) : print(error)
             }
-            if errorMessage.isEmpty {print("Search Error :" + errorMessage)}
         }
     }
 }
