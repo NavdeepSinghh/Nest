@@ -12,6 +12,9 @@ import XCTest
 class NestDemoDomainAsyncTests: XCTestCase {
     var sessionUnderTest : URLSession!
     
+    // URL string to test if the uiimageviewextension works fine
+    var urlString = "https://bucket-api.domain.com.au/v1/bucket/image/2013612324_27_pi_170523_110631-w1920-h1440"
+    
     override func setUp() {
         super.setUp()
         sessionUnderTest = URLSession(configuration : URLSessionConfiguration.default)
@@ -92,5 +95,20 @@ class NestDemoDomainAsyncTests: XCTestCase {
         // Then
         XCTAssertNil(responseError)
         XCTAssertEqual(statusCode, 200)
+    }
+    
+    // Testing the method on ImageViewCustom to see if it loads image from urlString
+    // The test fails if the url string is incorrect
+    func testUIImageExtensionFetchingImage(){
+        let image = ImageViewCustom()
+        let promise = expectation(description: "Call completes with imageView fetching image data successfully")
+        image.loadImageUsingURLString(urlString:urlString){flag in
+            if flag == true {
+                promise.fulfill()
+            }else {
+                XCTFail("Image loading failed")
+            }
+        }
+        waitForExpectations(timeout: 5, handler: nil)
     }
 }

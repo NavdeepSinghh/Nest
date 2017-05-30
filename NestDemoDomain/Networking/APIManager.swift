@@ -12,7 +12,6 @@ import UIKit
 typealias JSONDictionary = [String: Any]
 typealias FetchResult = Result<[Property], APIErrors>
 typealias QueryCompletion = (_ result : FetchResult) -> Void
-typealias QueryResult = ([Property]?, APIErrors?)->()
 
 class APIManager{
     static let _sharedinstance = APIManager()
@@ -69,6 +68,7 @@ class APIManager{
     
     
     // Helper methd to convert data to response dictionary
+    // More unit testable by breaking the login this ways
     func updatePropertiesSearchResults(with data: Data, completion: QueryCompletion) {
         var response : JSONDictionary?
         

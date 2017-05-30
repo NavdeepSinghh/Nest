@@ -35,13 +35,15 @@ class NestDemoDomainMockTests: XCTestCase {
         super.tearDown()
     }
     
+    
+    // Testing to check if the call to fetch properties results from the server returns success by mocking the response
     func testGetPropertiesResults() {
         // Given 
         let promise = expectation(description: "Status code : 200")
         
         // When
         XCTAssertEqual(apiManagerUnderTest.propertiesArray.count,0, "Empty properties array before the task begins")
-        apiManagerUnderTest.getPropertyResults(for :""){_ in
+        apiManagerUnderTest.getPropertyResults(for :""){_ in 
             promise.fulfill()
         }
         waitForExpectations(timeout: 5, handler: nil)

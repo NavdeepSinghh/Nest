@@ -59,6 +59,7 @@ class FeedCell: BaseCell {
             DispatchQueue.main.async {                
                 self.collectionView.reloadData()
             }
+        // We had handle the error more precisely rather then just printing to console.
         case let .failure(error) : print(error)
             }
         }

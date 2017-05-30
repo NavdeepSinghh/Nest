@@ -34,7 +34,7 @@ class PropertyCell : BaseCell {
     func setupPropertyImage(){
         if let propertyImageUrl = property?.propertyImageURLString{
             // Call the method to load images asynchronously using extension method
-            propertyImageView.loadImageUsingURLString(urlString: propertyImageUrl)
+            propertyImageView.loadImageUsingURLString(urlString: propertyImageUrl, completion: nil)
         }
     }
         

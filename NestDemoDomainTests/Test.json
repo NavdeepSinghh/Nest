@@ -1,0 +1,609 @@
+{
+    "results_returned": 201,
+    "results_total": 335563,
+    "search_results": [
+                       {
+                       "advertiser": {
+                       "images": {
+                       "logo_url": "https://images.domain.com.au/img/Agencys/12921/logo_12921.GIF"
+                       },
+                       "preferred_color_hex": "#2e61b7",
+                       "agency_listing_contacts": [
+                                                   {
+                                                   "display_full_name": "Sue  McDonald",
+                                                   "image_url": "https://images.domain.com.au/img/12921/contact_1077658.JPG?mod=170522-171758"
+                                                   }
+                                                   ],
+                       "id": 12921,
+                       "name": "Merimbula Realty"
+                       },
+                       "promo_level": "P+",
+                       "bathroom_count": null,
+                       "media": [
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013600063_1_pi_170517_031444-w800-h599"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013600063_2_pi_170517_031444-w800-h645"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013600063_3_pi_170517_031444-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013600063_4_pi_170517_031444-w800-h600"
+                                 }
+                                 ],
+                       "price": "$239,000",
+                       "has_video": false,
+                       "headline": "Panoramic Views",
+                       "carspace_count": null,
+                       "geo_location": {
+                       "latitude": -36.87785,
+                       "longitude": 149.905518
+                       },
+                       "topspot": {
+                       "available_listings": 2
+                       },
+                       "address": "110 Old Tathra Rd, Merimbula",
+                       "lifecycle_status": "New",
+                       "bedroom_count": null,
+                       "listing_type": "topspot",
+                       "homepass_enabled": false,
+                       "metadata": {
+                       "address_components": {
+                       "suburb": "MERIMBULA",
+                       "state_short": "NSW",
+                       "street": "Old Tathra Rd",
+                       "postcode": "2548",
+                       "street_number": "110"
+                       }
+                       }
+                       },
+                       {
+                       "advertiser": {
+                       "images": {
+                       "logo_url": "https://images.domain.com.au/img/Agencys/8206/logo_8206.png?date=131292632006114696"
+                       },
+                       "preferred_color_hex": "#130c0d",
+                       "agency_listing_contacts": [
+                                                   {
+                                                   "display_full_name": "Matthew Scott",
+                                                   "image_url": "https://images.domain.com.au/img/8206/contact_884551.jpeg?date=636275970024956956?mod=170524-092654"
+                                                   }
+                                                   ],
+                       "id": 8206,
+                       "name": "LJ Hooker Port Douglas"
+                       },
+                       "promo_level": "P+",
+                       "bathroom_count": 3,
+                       "media": [
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013612324_27_pi_170523_110631-w1920-h1440"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013612324_2_pi_170523_032857-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013612324_3_pi_170523_032859-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013612324_6_pi_170523_032905-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013612324_4_pi_170523_032901-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013612324_5_pi_170523_032902-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013612324_7_pi_170523_032852-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013612324_8_pi_170523_032853-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013612324_9_pi_170523_032857-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013612324_10_pi_170523_032858-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013612324_11_pi_170523_032859-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013612324_12_pi_170523_032900-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013612324_13_pi_170523_032852-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013612324_14_pi_170523_032857-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013612324_15_pi_170523_032859-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013612324_16_pi_170523_032900-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013612324_17_pi_170523_032901-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013612324_18_pi_170523_032903-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013612324_19_pi_170523_032852-w1920-h1439"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013612324_20_pi_170523_032857-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013612324_21_pi_170523_032858-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013612324_22_pi_170523_032859-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013612324_24_pi_170523_032905-w1920-h1439"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013612324_25_pi_170523_032902-w1920-h1439"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013612324_26_pi_170523_032906-w1920-h1439"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013612324_26_pi_170523_032906-w1920-h1439"
+                                 }
+                                 ],
+                       "price": "Contact Agent",
+                       "has_video": false,
+                       "lifecycle_status": "New",
+                       "headline": "Large House, Large Number of Extras",
+                       "carspace_count": 2,
+                       "geo_location": {
+                       "latitude": -16.5264664,
+                       "longitude": 145.466324
+                       },
+                       "address": "25 Ulysses Avenue, Port Douglas",
+                       "additional_features": [
+                                               "cable or satellite",
+                                               "ensuite",
+                                               "gas",
+                                               "secure parking",
+                                               "dishwasher",
+                                               "study",
+                                               "fully fenced"
+                                               ],
+                       "bedroom_count": 5,
+                       "auction_date": "2017-06-24T10:00:00",
+                       "listing_type": "property",
+                       "homepass_enabled": false,
+                       "id": 2013612324,
+                       "metadata": {
+                       "address_components": {
+                       "suburb": "PORT DOUGLAS",
+                       "state_short": "QLD",
+                       "street": "Ulysses Avenue",
+                       "postcode": "4877",
+                       "street_number": "25"
+                       }
+                       }
+                       },
+                       {
+                       "advertiser": {
+                       "images": {
+                       "logo_url": "https://images.domain.com.au/img/Agencys/20150/logo_20150.GIF"
+                       },
+                       "preferred_color_hex": "#000000",
+                       "agency_listing_contacts": [
+                                                   {
+                                                   "display_full_name": "Trenton Morrissey",
+                                                   "image_url": "https://images.domain.com.au/img/20150/contact_1039040.JPG?mod=170521-190633"
+                                                   }
+                                                   ],
+                       "id": 20150,
+                       "name": "Morrissey Property Pty Ltd"
+                       },
+                       "promo_level": "P+",
+                       "bathroom_count": 2,
+                       "media": [
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013602432_1_pi_170517_104601-w1000-h667"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013602432_2_pi_170517_104605-w1000-h667"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013602432_3_pi_170517_104611-w1000-h667"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013602432_4_pi_170517_104601-w1000-h667"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013602432_5_pi_170517_104605-w1000-h667"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013602432_6_pi_170517_104613-w1000-h667"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013602432_7_pi_170517_104601-w1000-h667"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013602432_8_pi_170517_104609-w1000-h667"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013602432_9_pi_170517_104617-w1000-h667"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013602432_10_pi_170517_104601-w1000-h667"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013602432_11_pi_170517_104607-w1000-h667"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013602432_12_pi_170518_125728-w3490-h2463"
+                                 }
+                                 ],
+                       "price": "Auction on 03/06/2017 at 4:00PM",
+                       "has_video": false,
+                       "lifecycle_status": "New",
+                       "earliest_inspections": [
+                                                {
+                                                "time_close": "2017-05-24T18:00:00",
+                                                "recurrence_type": "none",
+                                                "time_open": "2017-05-24T17:00:00"
+                                                }
+                                                ],
+                       "headline": "Stunning Renovation with Room to Move",
+                       "carspace_count": 1,
+                       "geo_location": {
+                       "latitude": -35.1981659,
+                       "longitude": 149.042664
+                       },
+                       "address": "32 Garrad Court, Charnwood",
+                       "additional_features": [
+                                               "air conditioning",
+                                               "ensuite",
+                                               "bath",
+                                               "dishwasher",
+                                               "study",
+                                               "shed",
+                                               "double glazed windows"
+                                               ],
+                       "bedroom_count": 3,
+                       "auction_date": "2017-06-03T16:00:00",
+                       "listing_type": "property",
+                       "homepass_enabled": true,
+                       "id": 2013602432,
+                       "metadata": {
+                       "address_components": {
+                       "suburb": "CHARNWOOD",
+                       "state_short": "ACT",
+                       "street": "Garrad Court",
+                       "postcode": "2615",
+                       "street_number": "32"
+                       }
+                       }
+                       },
+                       {
+                       "advertiser": {
+                       "images": {
+                       "logo_url": "https://images.domain.com.au/img/Agencys/21655/logo_21655.GIF"
+                       },
+                       "preferred_color_hex": "#006297",
+                       "agency_listing_contacts": [
+                                                   {
+                                                   "display_full_name": "Grahame O'Brien",
+                                                   "image_url": "https://images.domain.com.au/img/21655/contact_1178143.jpeg?mod=170524-052128"
+                                                   }
+                                                   ],
+                       "id": 21655,
+                       "name": "Independent Property Group Inner North & City"
+                       },
+                       "promo_level": "P+",
+                       "bathroom_count": 1,
+                       "media": [
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013603168_1_pi_170521_113942-w1920-h1280"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013603168_2_pi_170521_113947-w1920-h1280"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013603168_3_pi_170521_113942-w1920-h1280"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013603168_4_pi_170521_113945-w1920-h1633"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013603168_5_pi_170521_113942-w1920-h1279"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013603168_6_pi_170521_113947-w1920-h1280"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013603168_7_pi_170521_113942-w1920-h1280"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013603168_8_pi_170521_113944-w1920-h1279"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013603168_9_pi_170521_113949-w1920-h1280"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013603168_10_pi_170521_113954-w1920-h1280"
+                                 }
+                                 ],
+                       "price": "Auction on 10/06/2017 at 10:15AM",
+                       "has_video": false,
+                       "lifecycle_status": "New",
+                       "earliest_inspections": [
+                                                {
+                                                "time_close": "2017-05-27T13:45:00",
+                                                "recurrence_type": "none",
+                                                "time_open": "2017-05-27T13:00:00"
+                                                }
+                                                ],
+                       "headline": "Endless potential to create your own dream home",
+                       "carspace_count": 1,
+                       "geo_location": {
+                       "latitude": -35.3867722,
+                       "longitude": 149.073959
+                       },
+                       "address": "47 Kingsmill Street, Kambah",
+                       "additional_features": [
+                                               "bath"
+                                               ],
+                       "bedroom_count": 3,
+                       "auction_date": "2017-06-10T10:15:00",
+                       "listing_type": "property",
+                       "homepass_enabled": true,
+                       "id": 2013603168,
+                       "metadata": {
+                       "address_components": {
+                       "suburb": "KAMBAH",
+                       "state_short": "ACT",
+                       "street": "Kingsmill Street",
+                       "postcode": "2902",
+                       "street_number": "47"
+                       }
+                       }
+                       },
+                       {
+                       "advertiser": {
+                       "images": {
+                       "logo_url": "https://images.domain.com.au/img/Agencys/6059/logo_6059.png?date=131292631995489375"
+                       },
+                       "preferred_color_hex": "#130c0d",
+                       "agency_listing_contacts": [
+                                                   {
+                                                   "display_full_name": "Martin Forward",
+                                                   "image_url": "https://images.domain.com.au/img/6059/contact_804464.JPG?mod=170524-101639"
+                                                   }
+                                                   ],
+                       "id": 6059,
+                       "name": "LJ Hooker Northbridge"
+                       },
+                       "promo_level": "P+",
+                       "bathroom_count": 5,
+                       "media": [
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013604345_2_pi_170518_062643-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013604345_1_pi_170518_062625-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013604345_3_pi_170518_062710-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013604345_4_pi_170518_062724-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013604345_5_pi_170518_062625-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013604345_6_pi_170518_062639-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013604345_7_pi_170518_062709-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013604345_8_pi_170518_062720-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013604345_9_pi_170518_062625-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013604345_10_pi_170518_062700-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013604345_11_pi_170518_062716-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013604345_12_pi_170518_062722-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013604345_13_pi_170518_062625-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013604345_14_pi_170518_062651-w800-h600"
+                                 },
+                                 {
+                                 "media_type": "image",
+                                 "type": "photo",
+                                 "image_url": "https://bucket-api.domain.com.au/v1/bucket/image/2013604345_15_pi_170518_062723-w800-h600"
+                                 }
+                                 ],
+                       "price": "Contact Agent",
+                       "has_video": false,
+                       "lifecycle_status": "New",
+                       "earliest_inspections": [
+                                                {
+                                                "time_close": "2017-05-24T13:30:00",
+                                                "recurrence_type": "none",
+                                                "time_open": "2017-05-24T12:45:00"
+                                                }
+                                                ],
+                       "headline": "Bespoke Landmark Residence",
+                       "carspace_count": 4,
+                       "geo_location": {
+                       "latitude": -33.7865639,
+                       "longitude": 151.220474
+                       },
+                       "address": "24 Willowie Road, Castle Cove",
+                       "additional_features": [
+                                               "ensuite",
+                                               "secure parking",
+                                               "swimming pool",
+                                               "heating"
+                                               ],
+                       "bedroom_count": 5,
+                       "auction_date": "2017-06-17T10:00:00",
+                       "listing_type": "property",
+                       "homepass_enabled": true,
+                       "id": 2013604345,
+                       "metadata": {
+                       "address_components": {
+                       "suburb": "CASTLE COVE",
+                       "state_short": "NSW",
+                       "street": "Willowie Road",
+                       "postcode": "2069",
+                       "street_number": "24"
+                       }
+                       }
+                       }]
+}

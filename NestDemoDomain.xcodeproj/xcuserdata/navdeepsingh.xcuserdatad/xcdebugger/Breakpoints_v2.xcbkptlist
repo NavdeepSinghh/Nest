@@ -136,11 +136,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NestDemoDomainAsyncTests/NestDemoDomainAsyncTests.swift"
-            timestampString = "517653345.038475"
+            timestampString = "517810049.705948"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "testValidCallToDomainAPIGetsStatusCodeForRent200()"
             landmarkType = "7">
          </BreakpointContent>
@@ -776,11 +776,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NestDemoDomainAsyncTests/NestDemoDomainAsyncTests.swift"
-            timestampString = "517653153.22804"
+            timestampString = "517810049.705948"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "testValidCallToDomainAPIGetsStatusCodeForBuy200()"
             landmarkType = "7">
          </BreakpointContent>
@@ -792,11 +792,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NestDemoDomain/Networking/APIManager.swift"
-            timestampString = "517802612.238669"
+            timestampString = "517807827.884391"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "getPropertyResults(for:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -808,11 +808,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NestDemoDomain/Networking/APIManager.swift"
-            timestampString = "517802612.238669"
+            timestampString = "517807827.884391"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
             landmarkName = "APIManager"
             landmarkType = "3">
             <Locations>
@@ -886,12 +886,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SupportingFiles/ViewHelper.swift"
-            timestampString = "517798376.529759"
+            timestampString = "517812035.527362"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "loadImageUsingURLString(urlString:)"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "loadImageUsingURLString(urlString:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -902,11 +902,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NestDemoDomain/Networking/APIManager.swift"
-            timestampString = "517802663.978887"
+            timestampString = "517807827.884391"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "getPropertyResults(for:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -914,7 +914,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NestDemoDomain/Views/CollectionViewCells/FeedCell.swift"
@@ -925,6 +925,180 @@
             endingLineNumber = "55"
             landmarkName = "fetchProperties(for:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NestDemoDomain.FeedCell.fetchProperties (for : Swift.String) -&gt; ()"
+                  moduleName = "NestDemoDomain"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/navdeepsingh/Desktop/wPac/NestDemoDomain/NestDemoDomain/Views/CollectionViewCells/FeedCell.swift"
+                  timestampString = "517807865.433505"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NestDemoDomain.FeedCell.(fetchProperties (for : Swift.String) -&gt; ()).(closure #1)"
+                  moduleName = "NestDemoDomain"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/navdeepsingh/Desktop/wPac/NestDemoDomain/NestDemoDomain/Views/CollectionViewCells/FeedCell.swift"
+                  timestampString = "517807865.438069"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "30">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NestDemoDomainTests/NestDemoDomainTests.swift"
+            timestampString = "517812457.000075"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "testupdatePropertiesSearchResults()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SupportingFiles/ViewHelper.swift"
+            timestampString = "517812035.527362"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "loadImageUsingURLString(urlString:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NestDemoDomain.ImageViewCustom.loadImageUsingURLString (urlString : Swift.String, completion : Swift.Optional&lt;(Swift.Bool) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "NestDemoDomain"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/navdeepsingh/Desktop/wPac/NestDemoDomain/SupportingFiles/ViewHelper.swift"
+                  timestampString = "517810868.918751"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "695">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NestDemoDomain.ImageViewCustom.(loadImageUsingURLString (urlString : Swift.String, completion : Swift.Optional&lt;(Swift.Bool) -&gt; ()&gt;) -&gt; ()).(closure #1)"
+                  moduleName = "NestDemoDomain"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/navdeepsingh/Desktop/wPac/NestDemoDomain/SupportingFiles/ViewHelper.swift"
+                  timestampString = "517810868.922812"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NestDemoDomainAsyncTests.ImageViewCustom.loadImageUsingURLString (urlString : Swift.String, completion : Swift.Optional&lt;(Swift.Bool) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "NestDemoDomainAsyncTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/navdeepsingh/Desktop/wPac/NestDemoDomain/SupportingFiles/ViewHelper.swift"
+                  timestampString = "517810870.426651"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "695">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NestDemoDomainAsyncTests.ImageViewCustom.(loadImageUsingURLString (urlString : Swift.String, completion : Swift.Optional&lt;(Swift.Bool) -&gt; ()&gt;) -&gt; ()).(closure #1)"
+                  moduleName = "NestDemoDomainAsyncTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/navdeepsingh/Desktop/wPac/NestDemoDomain/SupportingFiles/ViewHelper.swift"
+                  timestampString = "517810870.430547"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "60">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NestDemoDomainAsyncTests/NestDemoDomainAsyncTests.swift"
+            timestampString = "517812035.527362"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "testUIImageExtensionFetchingImage()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NestDemoDomainAsyncTests.NestDemoDomainAsyncTests.testUIImageExtensionFetchingImage () -&gt; ()"
+                  moduleName = "NestDemoDomainAsyncTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/navdeepsingh/Desktop/wPac/NestDemoDomain/NestDemoDomainAsyncTests/NestDemoDomainAsyncTests.swift"
+                  timestampString = "517810870.435546"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "187">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NestDemoDomainAsyncTests.NestDemoDomainAsyncTests.(testUIImageExtensionFetchingImage () -&gt; ()).(closure #1)"
+                  moduleName = "NestDemoDomainAsyncTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/navdeepsingh/Desktop/wPac/NestDemoDomain/NestDemoDomainAsyncTests/NestDemoDomainAsyncTests.swift"
+                  timestampString = "517810870.43985"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -45,14 +45,19 @@ let imageCache = NSCache<NSString , UIImage>()
 class ImageViewCustom :  UIImageView {
     
     var imageUrlString : String?
-    func loadImageUsingURLString(urlString: String){
+    // Making this function more testable
+    func loadImageUsingURLString(urlString: String, completion : ((Bool) -> Void)?){
         
         imageUrlString = urlString
-        guard let url = URL(string: urlString) else {return}
+        guard let url = URL(string: urlString) else {
+            completion?(false)
+            return
+        }
         
         image = nil
         if let imageFromCache = imageCache.object(forKey: urlString as NSString){
             self.image = imageFromCache
+            completion?(true)
             return
         }
         
@@ -63,6 +68,7 @@ class ImageViewCustom :  UIImageView {
             } else if let data = data,
                 let response = response as? HTTPURLResponse,
                 response.statusCode == 200 {
+                completion?(true)
                 DispatchQueue.main.async {
                     if let imageToBeStoredInCache = UIImage(data: data){
                         if self.imageUrlString == urlString{

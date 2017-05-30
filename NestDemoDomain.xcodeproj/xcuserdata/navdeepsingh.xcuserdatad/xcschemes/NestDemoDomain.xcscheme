@@ -48,6 +48,16 @@
                ReferencedContainer = "container:NestDemoDomain.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F17D07C81EDD1D3C00CF5A15"
+               BuildableName = "NestDemoDomainTests.xctest"
+               BlueprintName = "NestDemoDomainTests"
+               ReferencedContainer = "container:NestDemoDomain.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

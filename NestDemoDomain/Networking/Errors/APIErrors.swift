@@ -9,6 +9,7 @@
 import Foundation
 
 enum APIErrors : Error {
+    // More generalized versions of these cases can be formed for extensive error handling
     case requestFailed(error: NSError)
     case responseUnsuccessful
     case invalidData

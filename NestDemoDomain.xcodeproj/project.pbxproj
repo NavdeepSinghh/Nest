@@ -26,6 +26,9 @@
 		F17D07C21EDD115800CF5A15 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1934F201ED3BBA000C2B9EE /* Property.swift */; };
 		F17D07C31EDD116D00CF5A15 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D1DE21ED50A4800EFB16B /* MockURLSession.swift */; };
 		F17D07C41EDD118100CF5A15 /* PropertiesRequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1911DEA1ED6AE8800E9A5CE /* PropertiesRequestRouter.swift */; };
+		F17D07CC1EDD1D3C00CF5A15 /* NestDemoDomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17D07CB1EDD1D3C00CF5A15 /* NestDemoDomainTests.swift */; };
+		F17D07D51EDD1D9900CF5A15 /* Test.json in Resources */ = {isa = PBXBuildFile; fileRef = F17D07D41EDD1D9900CF5A15 /* Test.json */; };
+		F17D07D71EDD241000CF5A15 /* ViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17181131ED2D76C00C76C57 /* ViewHelper.swift */; };
 		F1911DE71ED647F600E9A5CE /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1911DE61ED647F600E9A5CE /* FeedCell.swift */; };
 		F1911DE91ED6622C00E9A5CE /* BuyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1911DE81ED6622C00E9A5CE /* BuyCell.swift */; };
 		F1911DEB1ED6AE8800E9A5CE /* PropertiesRequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1911DEA1ED6AE8800E9A5CE /* PropertiesRequestRouter.swift */; };
@@ -42,6 +45,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		F15D1DD91ED508E600EFB16B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F17180CE1ED25A1600C76C57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F17180D51ED25A1600C76C57;
+			remoteInfo = NestDemoDomain;
+		};
+		F17D07CE1EDD1D3C00CF5A15 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F17180CE1ED25A1600C76C57 /* Project object */;
 			proxyType = 1;
@@ -72,6 +82,10 @@
 		F171810F1ED2A8DB00C76C57 /* PropertiesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertiesCell.swift; sourceTree = "<group>"; };
 		F17181131ED2D76C00C76C57 /* ViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHelper.swift; sourceTree = "<group>"; };
 		F17D07BD1EDCEF7C00CF5A15 /* APIErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIErrors.swift; sourceTree = "<group>"; };
+		F17D07C91EDD1D3C00CF5A15 /* NestDemoDomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NestDemoDomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F17D07CB1EDD1D3C00CF5A15 /* NestDemoDomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestDemoDomainTests.swift; sourceTree = "<group>"; };
+		F17D07CD1EDD1D3C00CF5A15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F17D07D41EDD1D9900CF5A15 /* Test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Test.json; sourceTree = "<group>"; };
 		F1911DE61ED647F600E9A5CE /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		F1911DE81ED6622C00E9A5CE /* BuyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyCell.swift; sourceTree = "<group>"; };
 		F1911DEA1ED6AE8800E9A5CE /* PropertiesRequestRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertiesRequestRouter.swift; sourceTree = "<group>"; };
@@ -96,6 +110,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F17180D31ED25A1600C76C57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F17D07C61EDD1D3C00CF5A15 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -145,6 +166,7 @@
 				F1934F1D1ED3BB3500C2B9EE /* SupportingFiles */,
 				F1934F2B1ED3E66E00C2B9EE /* NestDemoDomainAsyncTests */,
 				F15D1DD51ED508E600EFB16B /* NestDemoDomainMockTests */,
+				F17D07CA1EDD1D3C00CF5A15 /* NestDemoDomainTests */,
 				F17180D71ED25A1600C76C57 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -155,6 +177,7 @@
 				F17180D61ED25A1600C76C57 /* NestDemoDomain.app */,
 				F1934F2A1ED3E66E00C2B9EE /* NestDemoDomainAsyncTests.xctest */,
 				F15D1DD41ED508E600EFB16B /* NestDemoDomainMockTests.xctest */,
+				F17D07C91EDD1D3C00CF5A15 /* NestDemoDomainTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -208,6 +231,32 @@
 				F17D07BD1EDCEF7C00CF5A15 /* APIErrors.swift */,
 			);
 			path = Errors;
+			sourceTree = "<group>";
+		};
+		F17D07CA1EDD1D3C00CF5A15 /* NestDemoDomainTests */ = {
+			isa = PBXGroup;
+			children = (
+				F17D07D31EDD1D7600CF5A15 /* Data */,
+				F17D07D61EDD1DA100CF5A15 /* Tests */,
+				F17D07CD1EDD1D3C00CF5A15 /* Info.plist */,
+			);
+			path = NestDemoDomainTests;
+			sourceTree = "<group>";
+		};
+		F17D07D31EDD1D7600CF5A15 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F17D07D41EDD1D9900CF5A15 /* Test.json */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		F17D07D61EDD1DA100CF5A15 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F17D07CB1EDD1D3C00CF5A15 /* NestDemoDomainTests.swift */,
+			);
+			name = Tests;
 			sourceTree = "<group>";
 		};
 		F1934F1D1ED3BB3500C2B9EE /* SupportingFiles */ = {
@@ -295,6 +344,24 @@
 			productReference = F17180D61ED25A1600C76C57 /* NestDemoDomain.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F17D07C81EDD1D3C00CF5A15 /* NestDemoDomainTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F17D07D01EDD1D3C00CF5A15 /* Build configuration list for PBXNativeTarget "NestDemoDomainTests" */;
+			buildPhases = (
+				F17D07C51EDD1D3C00CF5A15 /* Sources */,
+				F17D07C61EDD1D3C00CF5A15 /* Frameworks */,
+				F17D07C71EDD1D3C00CF5A15 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F17D07CF1EDD1D3C00CF5A15 /* PBXTargetDependency */,
+			);
+			name = NestDemoDomainTests;
+			productName = NestDemoDomainTests;
+			productReference = F17D07C91EDD1D3C00CF5A15 /* NestDemoDomainTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F1934F291ED3E66E00C2B9EE /* NestDemoDomainAsyncTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F1934F311ED3E66E00C2B9EE /* Build configuration list for PBXNativeTarget "NestDemoDomainAsyncTests" */;
@@ -333,6 +400,11 @@
 						DevelopmentTeam = J7285MX229;
 						ProvisioningStyle = Automatic;
 					};
+					F17D07C81EDD1D3C00CF5A15 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F17180D51ED25A1600C76C57;
+					};
 					F1934F291ED3E66E00C2B9EE = {
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
@@ -356,6 +428,7 @@
 				F17180D51ED25A1600C76C57 /* NestDemoDomain */,
 				F1934F291ED3E66E00C2B9EE /* NestDemoDomainAsyncTests */,
 				F15D1DD31ED508E600EFB16B /* NestDemoDomainMockTests */,
+				F17D07C81EDD1D3C00CF5A15 /* NestDemoDomainTests */,
 			);
 		};
 /* End PBXProject section */
@@ -375,6 +448,14 @@
 			files = (
 				F17180E41ED25A1600C76C57 /* LaunchScreen.storyboard in Resources */,
 				F17180E11ED25A1600C76C57 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F17D07C71EDD1D3C00CF5A15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F17D07D51EDD1D9900CF5A15 /* Test.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +505,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F17D07C51EDD1D3C00CF5A15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F17D07CC1EDD1D3C00CF5A15 /* NestDemoDomainTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1934F261ED3E66E00C2B9EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -434,6 +523,7 @@
 				F17D07C21EDD115800CF5A15 /* Property.swift in Sources */,
 				F17D07C31EDD116D00CF5A15 /* MockURLSession.swift in Sources */,
 				F17D07C11EDD113800CF5A15 /* APIErrors.swift in Sources */,
+				F17D07D71EDD241000CF5A15 /* ViewHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +534,11 @@
 			isa = PBXTargetDependency;
 			target = F17180D51ED25A1600C76C57 /* NestDemoDomain */;
 			targetProxy = F15D1DD91ED508E600EFB16B /* PBXContainerItemProxy */;
+		};
+		F17D07CF1EDD1D3C00CF5A15 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F17180D51ED25A1600C76C57 /* NestDemoDomain */;
+			targetProxy = F17D07CE1EDD1D3C00CF5A15 /* PBXContainerItemProxy */;
 		};
 		F1934F301ED3E66E00C2B9EE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -612,6 +707,32 @@
 			};
 			name = Release;
 		};
+		F17D07D11EDD1D3C00CF5A15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = NestDemoDomainTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Navdeep.NestDemoDomainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NestDemoDomain.app/NestDemoDomain";
+			};
+			name = Debug;
+		};
+		F17D07D21EDD1D3C00CF5A15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = NestDemoDomainTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Navdeep.NestDemoDomainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NestDemoDomain.app/NestDemoDomain";
+			};
+			name = Release;
+		};
 		F1934F321ED3E66E00C2B9EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -667,6 +788,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F17D07D01EDD1D3C00CF5A15 /* Build configuration list for PBXNativeTarget "NestDemoDomainTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F17D07D11EDD1D3C00CF5A15 /* Debug */,
+				F17D07D21EDD1D3C00CF5A15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		F1934F311ED3E66E00C2B9EE /* Build configuration list for PBXNativeTarget "NestDemoDomainAsyncTests" */ = {
 			isa = XCConfigurationList;
