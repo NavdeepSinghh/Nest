@@ -26,7 +26,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -55,6 +56,16 @@
                BlueprintIdentifier = "F17D07C81EDD1D3C00CF5A15"
                BuildableName = "NestDemoDomainTests.xctest"
                BlueprintName = "NestDemoDomainTests"
+               ReferencedContainer = "container:NestDemoDomain.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F1B8797B1EDD4465007658FF"
+               BuildableName = "NestDemoDomainUITests.xctest"
+               BlueprintName = "NestDemoDomainUITests"
                ReferencedContainer = "container:NestDemoDomain.xcodeproj">
             </BuildableReference>
          </TestableReference>

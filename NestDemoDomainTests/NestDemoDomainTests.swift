@@ -66,4 +66,19 @@ class NestDemoDomainTests: XCTestCase {
         }
     }
     
+    // Performance checking to see the performance of this function
+    // In order to set the metrics for this method run the tests and set performance metrics by editing the scheme
+    // The test will fail or pass depending on the set scheme
+    func testMeasurePerformanceOfUpdateSearchResults(){
+        measure {
+            self.apiManager.updatePropertiesSearchResults(with : self.data){ result in
+                switch result {
+                case .success(_):
+                    XCTAssertEqual(self.apiManager.propertiesArray.count, 4, "Coundn't parse properly")
+                case let .failure(error) :
+                    XCTFail("failure Reason = \(error)")
+                }
+            }
+        }
+    }
 }
