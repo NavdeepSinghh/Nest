@@ -22,5 +22,9 @@ Approx 75%
 ### Steps to Execute tests:
 Please follow instructions inside the code comments and inside test targets. Please make sure that the code module to be tested is included in the test target memberships.
 
+### Design Goal:
+Design consideration : The like button is next to description and not on top of the property image. 
+Design goal is to mimimise dependencies between controllers and models. Fetch, filter and model data asynchronously and populate the views on the main queue and make use of protocol oriented principles of the swift language to maintain decent level of decoupling within the application logic.
+
 Repo Owner
 Navdeep Singh
