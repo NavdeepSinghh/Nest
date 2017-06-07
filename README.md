@@ -1,5 +1,5 @@
 # NestDomainDemo
-Tech test for DomainIOSDev
+A demo app displaying properties for renting and buying using the domain web api. The UI is made programmatically.
 
 ## Build and Runtime Requirements
 Xcode 8.0 or later iOS 9.0 or later OS X v10.12 or later
@@ -8,7 +8,7 @@ Xcode 8.0 or later iOS 9.0 or later OS X v10.12 or later
 Please clone the project in your local machine and open with the latest version of Xcode. Build and run the project after selecting a device from the device inspector.
 
 ##  About NestDemoDomain
-Tech test for Domain, written using Swift 3.0. The app accesses domain api to fetch Properties and display it to the user in realtime. The app refreshes latest poperties as soon as the user launches the app or during switch between the menu buttons. 
+Written using Swift 3.0. The app accesses domain api to fetch Properties and display it to the user in realtime. The app refreshes latest poperties as soon as the user launches the app or during switch between the menu buttons. 
 
 ## Unit Tests
 Unit tests are written to test asynchronous code (creating the request to be sent to the apimanager) and Helper code which processed date data. Mocking the response from the api manager and processing json data.
